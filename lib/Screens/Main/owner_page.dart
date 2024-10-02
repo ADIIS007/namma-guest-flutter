@@ -15,7 +15,7 @@ class _OwnerPageState extends State<OwnerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Customize your paying guest residency'),
+        title: const Text('Customize your look'),
       ),
       body: SingleChildScrollView(
         child: Padding(

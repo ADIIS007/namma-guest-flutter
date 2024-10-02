@@ -1,13 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:namma_guest/Screens/Admin/Onboarding/description_onboarding_page.dart';
 
-class NameOnboardingPage extends StatefulWidget {
-  const NameOnboardingPage({super.key});
+import 'package:flutter/material.dart';
+import 'package:namma_guest/Screens/Admin/Onboarding/email_onboarding_page.dart';
+
+class PincodeOnboardingPage extends StatefulWidget {
+  const PincodeOnboardingPage({super.key});
+
   @override
-  State<NameOnboardingPage> createState() => _NameOnboardingPageState();
+  State<PincodeOnboardingPage> createState() => _PincodeOnboardingPageState();
 }
 
-class _NameOnboardingPageState extends State<NameOnboardingPage> {
+class _PincodeOnboardingPageState extends State<PincodeOnboardingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +29,7 @@ class _NameOnboardingPageState extends State<NameOnboardingPage> {
             const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: 'Enter Hostel Name',
+                labelText: 'Enter Hostel Pin Code',
               ),
             ),
             const SizedBox(height: 20),
@@ -36,7 +38,7 @@ class _NameOnboardingPageState extends State<NameOnboardingPage> {
               child: ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -44,7 +46,7 @@ class _NameOnboardingPageState extends State<NameOnboardingPage> {
                 ),
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const DescriptionOnboardingPage()),
+                    MaterialPageRoute(builder: (context) => const EmailOnboardingPage()),
                   );
                 },
                 icon: const Icon(Icons.arrow_forward),

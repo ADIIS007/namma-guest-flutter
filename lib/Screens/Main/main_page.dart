@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:namma_guest/Screens/Admin/Onboarding/name_onboarding_page.dart';
 import 'package:namma_guest/Screens/Main/user_page.dart';
 
 import 'owner_page.dart';
@@ -106,7 +107,7 @@ class _MainPageState extends State<MainScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    _conformationBox(context, 'You are sure you are Owning/Listing an Accommodation.\nThis action can not be reverted!!', const OwnerPage());
+                    _conformationBox(context, 'You are sure you are Owning/Listing an Accommodation.\nThis action can not be reverted!!', const NameOnboardingPage());
                   },
                   style: ButtonStyle(
                     foregroundColor:
