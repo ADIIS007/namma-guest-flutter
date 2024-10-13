@@ -19,12 +19,15 @@ class _LoginPageState extends State<LoginPage> {
           padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 32),
           child: Column(
             children: [
+              const SizedBox(
+                height: 140,
+              ),
               Image.asset(
                 'assets/images/1.png',
                 width: 240,
               ),
               const SizedBox(
-                height: 18,
+                height: 38,
               ),
               const Text(
                 "Let's get started",
@@ -32,9 +35,6 @@ class _LoginPageState extends State<LoginPage> {
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
-              ),
-              const SizedBox(
-                height: 10,
               ),
               const Text(
                 "Never a better time than now to start.",
@@ -70,34 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: const Padding(
                     padding: EdgeInsets.all(14.0),
                     child: Text(
-                      'Create Account',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 22,
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                    foregroundColor:
-                    MaterialStateProperty.all<Color>(Colors.purple),
-                    backgroundColor:
-                    MaterialStateProperty.all<Color>(Colors.white),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(24.0),
-                      ),
-                    ),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(14.0),
-                    child: Text(
-                      'Login',
+                      'Get Started',
                       style: TextStyle(fontSize: 16),
                     ),
                   ),

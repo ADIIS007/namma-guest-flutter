@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:namma_guest/Service/validation.dart';
 
 import 'opt_page.dart';
 
@@ -10,6 +11,9 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  //Create a email Controller
+  final TextEditingController _emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,6 +83,7 @@ class _RegisterState extends State<Register> {
                 child: Column(
                   children: [
                     TextFormField(
+                      controller: _emailController,
                       keyboardType: TextInputType.emailAddress,
                       style: const TextStyle(
                         fontSize: 18,
@@ -115,9 +120,20 @@ class _RegisterState extends State<Register> {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => const Otp()),
-                          );
+                          if(ValidationService.validateEmail(_emailController.text)) {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) => const Otp()),
+                            );
+                          } else {
+                            showDialog(
+                              context: context,
+                              builder: (context) => const AlertDialog(
+                                title: Text('Invalid Email'),
+                                content: Text('Invalid Email Address\nPlease enter a valid email address\nTank You!'),
+                              ),
+                            );
+                          }
                         },
                         style: ButtonStyle(
                           foregroundColor:

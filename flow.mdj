@@ -1,0 +1,4690 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Untitled",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFF+qBtyKM79qY=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Main",
+					"defaultDiagram": true
+				}
+			]
+		},
+		{
+			"_type": "AWSModel",
+			"_id": "AAAAAAGSd9lJkx0RbsM=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "AWSModel1",
+			"ownedElements": [
+				{
+					"_type": "AWSDiagram",
+					"_id": "AAAAAAGSd9lJkx0S8i8=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9lJkx0RbsM="
+					},
+					"name": "AWSDiagram1",
+					"ownedElements": [
+						{
+							"_type": "FCFlowchart",
+							"_id": "AAAAAAGSd9mGgx0Wg5M=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9lJkx0S8i8="
+							},
+							"name": "Flowchart1",
+							"ownedElements": [
+								{
+									"_type": "FCFlowchartDiagram",
+									"_id": "AAAAAAGSd9mGhB0XrHY=",
+									"_parent": {
+										"$ref": "AAAAAAGSd9mGgx0Wg5M="
+									},
+									"name": "FlowchartDiagram1"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"_type": "WFWireframe",
+			"_id": "AAAAAAGSd9mppB0b3yA=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Wireframe1",
+			"ownedElements": [
+				{
+					"_type": "WFWireframeDiagram",
+					"_id": "AAAAAAGSd9mppB0cYUE=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "WFWireframeDiagram1",
+					"ownedViews": [
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd+51KB9UkpU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd+/w7x90jWA="
+								},
+								{
+									"$ref": "AAAAAAGSd/9iICBPkL8="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 1232,
+							"top": 2235,
+							"width": 184,
+							"height": 901
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGSd/elhB/yIgY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1240,
+							"top": 2368,
+							"width": 170,
+							"height": 666
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd9neZB0ihpY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd9smYR06V9A="
+								},
+								{
+									"$ref": "AAAAAAGSd9uT0x1Dq20="
+								},
+								{
+									"$ref": "AAAAAAGSd9vrCx1QuU4="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 48,
+							"top": 48,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd9smYR06V9A=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd9neZB0ihpY="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 96,
+							"top": 88,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSd9uT0x1Dq20=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9uT0x1Beow="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd9uT0x1EMmo=",
+									"_parent": {
+										"$ref": "AAAAAAGSd9uT0x1Dq20="
+									},
+									"font": "Arial;13;0",
+									"left": 80,
+									"top": 198,
+									"width": 120,
+									"height": 13,
+									"text": "Hostel Name",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd9neZB0ihpY="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 72,
+							"top": 192,
+							"width": 136,
+							"height": 32,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd9uT0x1EMmo="
+							}
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd9vrCx1QuU4=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd9vrCx1Rde8=",
+									"_parent": {
+										"$ref": "AAAAAAGSd9vrCx1QuU4="
+									},
+									"font": "Arial;13;0",
+									"left": 72,
+									"top": 272,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd9neZB0ihpY="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 72,
+							"top": 264,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd9vrCx1Rde8="
+							}
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd93vXR18SEA=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd+Fg2h4Rg5o="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 278,
+							"top": 50,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd93vXR19f9U=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd93vXR18SEA="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 326,
+							"top": 90,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd93vXR2AAq8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd93vXR2BWEg=",
+									"_parent": {
+										"$ref": "AAAAAAGSd93vXR2AAq8="
+									},
+									"font": "Arial;13;0",
+									"left": 302,
+									"top": 274,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd93vXR18SEA="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 302,
+							"top": 266,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd93vXR2BWEg="
+							}
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd94GjR2UTh8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd+Hcsh4g7uo="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 516,
+							"top": 53,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd94GjR2VmE0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd94GjR2UTh8="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 564,
+							"top": 93,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd94GjR2Yut0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd94GjR2Z8gE=",
+									"_parent": {
+										"$ref": "AAAAAAGSd94GjR2Yut0="
+									},
+									"font": "Arial;13;0",
+									"left": 540,
+									"top": 277,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd94GjR2UTh8="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 540,
+							"top": 269,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd94GjR2Z8gE="
+							}
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd96bbh2tQqo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd+M56B4/M7g="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 748,
+							"top": 53,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd96bbh2ucgU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd96bbh2tQqo="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 796,
+							"top": 93,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd96bbh2xJqI=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd96bbh2yov4=",
+									"_parent": {
+										"$ref": "AAAAAAGSd96bbh2xJqI="
+									},
+									"font": "Arial;13;0",
+									"left": 772,
+									"top": 277,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd96bbh2tQqo="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 772,
+							"top": 269,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd96bbh2yov4="
+							}
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd98F5x3Iv68=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd+NTcB5I1SU="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 975,
+							"top": 53,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd98F5x3J4Wo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd98F5x3Iv68="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1023,
+							"top": 93,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd98F5x3Mn2E=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd98F5x3Nt6o=",
+									"_parent": {
+										"$ref": "AAAAAAGSd98F5x3Mn2E="
+									},
+									"font": "Arial;13;0",
+									"left": 999,
+									"top": 277,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd98F5x3Iv68="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 999,
+							"top": 269,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd98F5x3Nt6o="
+							}
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd98YZx3gdYY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd+NpmB5RkqE="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 1207,
+							"top": 53,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd98YZx3hzB8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd98YZx3gdYY="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1255,
+							"top": 93,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd98YZx3kSus=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd98YZx3lIYQ=",
+									"_parent": {
+										"$ref": "AAAAAAGSd98YZx3kSus="
+									},
+									"font": "Arial;13;0",
+									"left": 1232,
+									"top": 277,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd98YZx3gdYY="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1232,
+							"top": 269,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd98YZx3lIYQ="
+							}
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd98wNx34Kd0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd+OMER5auP0="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 1439,
+							"top": 53,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd98wNx35Aoo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd98wNx34Kd0="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1487,
+							"top": 93,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd98wNx38+2s=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd98wNx39Ujk=",
+									"_parent": {
+										"$ref": "AAAAAAGSd98wNx38+2s="
+									},
+									"font": "Arial;13;0",
+									"left": 1463,
+									"top": 277,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd98wNx34Kd0="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1463,
+							"top": 269,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd98wNx39Ujk="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSd+Fg2h4Rg5o=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+Fg2R4P6i4="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+Fg2h4Swmg=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+Fg2h4Rg5o="
+									},
+									"font": "Arial;13;0",
+									"left": 312,
+									"top": 198,
+									"width": 120,
+									"height": 13,
+									"text": "Hostel Description",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd93vXR18SEA="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 304,
+							"top": 192,
+							"width": 136,
+							"height": 33,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+Fg2h4Swmg="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSd+Hcsh4g7uo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+Hcsh4eq0A="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+Hcsh4hpWE=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+Hcsh4g7uo="
+									},
+									"font": "Arial;13;0",
+									"left": 544,
+									"top": 182,
+									"width": 128,
+									"height": 26,
+									"text": "Hostel Address Line 1",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd94GjR2UTh8="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 536,
+							"top": 176,
+							"width": 144,
+							"height": 38,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+Hcsh4hpWE="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSd+KEjB4ulK4=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+KEjB4spC0="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+KEjB4v1Vo=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+KEjB4ulK4="
+									},
+									"font": "Arial;13;0",
+									"left": 544,
+									"top": 222,
+									"width": 128,
+									"height": 26,
+									"text": "Hostel Address Line 2",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 536,
+							"top": 216,
+							"width": 144,
+							"height": 38,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+KEjB4v1Vo="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSd+M56B4/M7g=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+M56B49iSw="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+M56B5A6LE=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+M56B4/M7g="
+									},
+									"font": "Arial;13;0",
+									"left": 784,
+									"top": 214,
+									"width": 112,
+									"height": 13,
+									"text": "Hostel State",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd96bbh2tQqo="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 776,
+							"top": 208,
+							"width": 128,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+M56B5A6LE="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSd+NTcB5I1SU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+NTcB5GVhc="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+NTcB5JxJ8=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+NTcB5I1SU="
+									},
+									"font": "Arial;13;0",
+									"left": 1008,
+									"top": 214,
+									"width": 120,
+									"height": 13,
+									"text": "Hostel City",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd98F5x3Iv68="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1000,
+							"top": 208,
+							"width": 136,
+							"height": 32,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+NTcB5JxJ8="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSd+NpmB5RkqE=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+NpmB5P0nc="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+NpmB5SOFE=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+NpmB5RkqE="
+									},
+									"font": "Arial;13;0",
+									"left": 1240,
+									"top": 214,
+									"width": 112,
+									"height": 13,
+									"text": "Hostel PinCode",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd98YZx3gdYY="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1232,
+							"top": 208,
+							"width": 128,
+							"height": 32,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+NpmB5SOFE="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSd+OMER5auP0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+OMER5YwE0="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+OMER5bK1U=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+OMER5auP0="
+									},
+									"font": "Arial;13;0",
+									"left": 1472,
+									"top": 206,
+									"width": 120,
+									"height": 13,
+									"text": "Hostel email",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd98wNx34Kd0="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1464,
+							"top": 200,
+							"width": 136,
+							"height": 38,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+OMER5bK1U="
+							}
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd+Vdnx6q3vU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd+OjaR5jf5w="
+								},
+								{
+									"$ref": "AAAAAAGSd+ZiGx7iCJY="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 1210,
+							"top": 433,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd+Vdnx6rVHM=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd+Vdnx6q3vU="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1258,
+							"top": 473,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd+Vdnx6sQPg=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+Vdnx6tpEg=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+Vdnx6sQPg="
+									},
+									"font": "Arial;13;0",
+									"left": 1232,
+									"top": 680,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd+Vdnx6q3vU="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1232,
+							"top": 672,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+Vdnx6tpEg="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSd+OjaR5jf5w=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+OjaR5hS5Y="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+OjaR5kcBE=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+OjaR5jf5w="
+									},
+									"font": "Arial;13;0",
+									"left": 1232,
+									"top": 582,
+									"width": 136,
+									"height": 13,
+									"text": "Hostel PhoneNumber",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd+Vdnx6q3vU="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1224,
+							"top": 576,
+							"width": 152,
+							"height": 38,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+OjaR5kcBE="
+							}
+						},
+						{
+							"_type": "WFCheckboxView",
+							"_id": "AAAAAAGSd+ZiGx7iCJY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+ZiGx7giEE="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+ZiGx7jf+Q=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+ZiGx7iCJY="
+									},
+									"font": "Arial;13;0",
+									"left": 1234,
+									"top": 633,
+									"width": 150,
+									"height": 26,
+									"text": "This is Whatsapp Number",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd+Vdnx6q3vU="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1216,
+							"top": 624,
+							"width": 168,
+							"height": 39,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+ZiGx7jf+Q="
+							}
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd+eQ0B7vOQQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "192:272;278:231"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd+euuB7yLQ4=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "424:272;518:241"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd+e/eB71Kmc=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "664:280;750:241"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd+fQsR74QW8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "896:272;978:237"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd+fcwR774PQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1120:272;1208:233"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd+gYIh8PVtY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1120:272;1208:233"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd+hB6x8T6mY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1344:280;1440:235"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd+hszB8WeHg=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1560:280;1394:594"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd+p/ex9JfZk=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1352:680;1504:576"
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd+51KB9Vk1I=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd+51KB9UkpU="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1280,
+							"top": 2275,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd+51KB9WAKk=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+51KB9XTIs=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+51KB9WAKk="
+									},
+									"font": "Arial;13;0",
+									"left": 1256,
+									"top": 3048,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd+51KB9UkpU="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1256,
+							"top": 3040,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+51KB9XTIs="
+							}
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd+/w7x90jWA=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd+/w7x9y7J0="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+/w7x91dcI=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+/w7x90jWA="
+									},
+									"font": "Arial;13;0",
+									"left": 1256,
+									"top": 3088,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Aminities➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSd+51KB9UkpU="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1256,
+							"top": 3080,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+/w7x91dcI="
+							}
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/JgEB+A7w0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1272,
+							"top": 2376,
+							"width": 104,
+							"height": 25,
+							"text": "Hostel Name"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/KD2h+E4BU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1256,
+							"top": 2432,
+							"width": 136,
+							"height": 25,
+							"text": "Hostel Description"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/KfsR+Ion4=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1248,
+							"top": 2488,
+							"width": 152,
+							"height": 25,
+							"text": "Hostel Phone Number"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/MW8x+MK18=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1240,
+							"top": 2544,
+							"width": 168,
+							"height": 25,
+							"text": "Hostel Address Line 1"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/Mz+h+QwtE=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1240,
+							"top": 2600,
+							"width": 168,
+							"height": 25,
+							"text": "Hostel Address Address 2"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/NRnB+UeMc=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1264,
+							"top": 2656,
+							"width": 128,
+							"height": 25,
+							"text": "Hostel State"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/OcdR+YG7s=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1264,
+							"top": 2720,
+							"width": 128,
+							"height": 25,
+							"text": "Hostel City"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/O6dR+cXu0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1272,
+							"top": 2784,
+							"width": 108,
+							"height": 25,
+							"text": "Hostel Pincode"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/PRtR+ga5A=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1280,
+							"top": 2856,
+							"width": 88,
+							"height": 25,
+							"text": "Hostel Email"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/QO7h+k2kY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1248,
+							"top": 2912,
+							"width": 152,
+							"height": 25,
+							"text": "Hostel Phone Number"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSd/QzLx+oREo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1248,
+							"top": 2968,
+							"width": 152,
+							"height": 38,
+							"text": "Hostel WhatsApp Number"
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSd/sz+CACUpQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd/sz+CAAtic="
+							},
+							"font": "Arial;13;0",
+							"left": 1176,
+							"top": 904,
+							"width": 264,
+							"height": 512
+						},
+						{
+							"_type": "RectangleView",
+							"_id": "AAAAAAGSd/uJKiAJRoc=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1184,
+							"top": 1336,
+							"width": 248,
+							"height": 50
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd/vUeyAU4NY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd/vUeyASxf4="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1200,
+							"top": 1352,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd/vZEyAZOYw=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd/vZEyAXt3A="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1296,
+							"top": 1352,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd/vcKyAeCjc=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd/vcKyAcUz8="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1392,
+							"top": 1352,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd/vj+yAjul0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd/vj+yAhFsk="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1248,
+							"top": 1352,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd/vmhSAo0AA=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd/vmhSAm/Kg="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1344,
+							"top": 1352,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd/y2nyA7Sx4=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1224:648;1224:919"
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSd/3qAyBHLI8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1312:1368;1312:2240"
+						},
+						{
+							"_type": "WFPanelView",
+							"_id": "AAAAAAGSd/9iICBPkL8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd/9iICBN+qU="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd+51KB9UkpU="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSeAENpyBYI6k="
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1240,
+							"top": 2256,
+							"width": 168,
+							"height": 16
+						},
+						{
+							"_type": "WFSwitchView",
+							"_id": "AAAAAAGSeAENpyBYI6k=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSeAENpyBWlI0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSd/9iICBPkL8="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1376,
+							"top": 2256,
+							"width": 26,
+							"height": 16
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSeAFfsCBl2OQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSeAFfsCBjhpE="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSeAFfsCBmFxg=",
+									"_parent": {
+										"$ref": "AAAAAAGSeAFfsCBl2OQ="
+									},
+									"font": "Arial;13;0",
+									"left": 1480,
+									"top": 2248,
+									"width": 120,
+									"height": 39,
+									"text": "This is to toggle between admin and user view",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1480,
+							"top": 2248,
+							"width": 120,
+							"height": 48,
+							"nameLabel": {
+								"$ref": "AAAAAAGSeAFfsCBmFxg="
+							}
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSeAHsEyBx5Io=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSeAENpyBYI6k="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSeAFfsCBl2OQ="
+							},
+							"lineStyle": 1,
+							"points": "1479:2269;1403:2265"
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSeAi9OyB+rfM=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSeAi9OyB8sH8="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSeAi9OyB/2RI=",
+									"_parent": {
+										"$ref": "AAAAAAGSeAi9OyB+rfM="
+									},
+									"font": "Arial;13;0",
+									"left": 1520,
+									"top": 1456,
+									"width": 168,
+									"height": 26,
+									"text": "This is for forcasting the revenue in the month",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1520,
+							"top": 1456,
+							"width": 168,
+							"height": 32,
+							"nameLabel": {
+								"$ref": "AAAAAAGSeAi9OyB/2RI="
+							}
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSeAk8BSCJBdQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSeAk8BSCHwMU="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSeAk8BSCKKI0=",
+									"_parent": {
+										"$ref": "AAAAAAGSeAk8BSCJBdQ="
+									},
+									"font": "Arial;13;0",
+									"left": 1352,
+									"top": 1504,
+									"width": 192,
+									"height": 26,
+									"text": "This is for seeing the list of user staying in the paying guest",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1352,
+							"top": 1504,
+							"width": 192,
+							"height": 32,
+							"nameLabel": {
+								"$ref": "AAAAAAGSeAk8BSCKKI0="
+							}
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSeAotQSCWJ00=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSeAotQSCUf8U="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSeAotQSCXbMM=",
+									"_parent": {
+										"$ref": "AAAAAAGSeAotQSCWJ00="
+									},
+									"font": "Arial;13;0",
+									"left": 1088,
+									"top": 1512,
+									"width": 176,
+									"height": 26,
+									"text": "This is to get the AI Analatics/ Data science analatics",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1088,
+							"top": 1512,
+							"width": 176,
+							"height": 40,
+							"nameLabel": {
+								"$ref": "AAAAAAGSeAotQSCXbMM="
+							}
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSeAqnKiCjZrU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSeAqnKiCh9pI="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSeAqnKiCkXJo=",
+									"_parent": {
+										"$ref": "AAAAAAGSeAqnKiCjZrU="
+									},
+									"font": "Arial;13;0",
+									"left": 984,
+									"top": 1416,
+									"width": 160,
+									"height": 39,
+									"text": "This Page is to sponser ads & verification process of the Hostel",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 984,
+							"top": 1416,
+							"width": 160,
+							"height": 52,
+							"nameLabel": {
+								"$ref": "AAAAAAGSeAqnKiCkXJo="
+							}
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSeAtI3CCsEA0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSeAqnKiCjZrU="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSd/vUeyAU4NY="
+							},
+							"lineStyle": 1,
+							"points": "1199:1371;1115:1415"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSeAtZPiCwTUs=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSeAotQSCWJ00="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSd/vj+yAjul0="
+							},
+							"lineStyle": 1,
+							"points": "1254:1377;1187:1511"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSeAtf7SCzPqo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSeAk8BSCJBdQ="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSd/vmhSAo0AA="
+							},
+							"lineStyle": 1,
+							"points": "1364:1377;1438:1503"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSeAtkdiC2vUU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSeAi9OyB+rfM="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSd/vcKyAeCjc="
+							},
+							"lineStyle": 1,
+							"points": "1417:1371;1573:1455"
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSeAuVNiC7y+8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSeAuVNiC5aMo="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSeAuVNiC8F5Q=",
+									"_parent": {
+										"$ref": "AAAAAAGSeAuVNiC7y+8="
+									},
+									"font": "Arial;13;0",
+									"left": 1536,
+									"top": 3048,
+									"width": 192,
+									"height": 26,
+									"text": "Same UI as the master one and can be for admina nd user",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1536,
+							"top": 3048,
+							"width": 192,
+							"height": 40,
+							"nameLabel": {
+								"$ref": "AAAAAAGSeAuVNiC8F5Q="
+							}
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSeAvy3yDG2XA=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSeAvy3yDEipo="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSeAvy4CDHLW0=",
+									"_parent": {
+										"$ref": "AAAAAAGSeAvy3yDG2XA="
+									},
+									"font": "Arial;13;0",
+									"left": 840,
+									"top": 3096,
+									"width": 216,
+									"height": 26,
+									"text": "same as the previous one for both admin and user",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 840,
+							"top": 3096,
+							"width": 216,
+							"height": 40,
+							"nameLabel": {
+								"$ref": "AAAAAAGSeAvy4CDHLW0="
+							}
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSeAxcsiDQPco=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSeAvy3yDG2XA="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSd+/w7x90jWA="
+							},
+							"lineStyle": 1,
+							"points": "1255:3096;1057:3109"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSeAxj0iDTpow=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSeAuVNiC7y+8="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSd+51KB9WAKk="
+							},
+							"lineStyle": 1,
+							"points": "1393:3056;1535:3063"
+						},
+						{
+							"_type": "WFSeparatorView",
+							"_id": "AAAAAAGSe6rWbwffP9E=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe6rWbwfdkJA="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 720,
+							"top": 1360,
+							"width": 488,
+							"height": 8
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSe6uS9wfqkwo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSe6zL0QgA78E="
+								},
+								{
+									"$ref": "AAAAAAGSe63MXQghEcs="
+								},
+								{
+									"$ref": "AAAAAAGSe65VGQgyGZ0="
+								},
+								{
+									"$ref": "AAAAAAGSe67KnQg+/a8="
+								},
+								{
+									"$ref": "AAAAAAGSe67/xwhHwNQ="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 536,
+							"top": 1112,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe6xJpQf1W7U=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe6xJpQfzGEo="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 600,
+							"top": 1160,
+							"width": 48,
+							"height": 48
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe6zL0QgA78E=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe6zL0Af+51Y="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe6zL0QgBsVg=",
+									"_parent": {
+										"$ref": "AAAAAAGSe6zL0QgA78E="
+									},
+									"font": "Arial;13;0",
+									"left": 568,
+									"top": 1238,
+									"width": 36.1435546875,
+									"height": 52,
+									"text": "Plan 1 for 60 days",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe6uS9wfqkwo="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 560,
+							"top": 1232,
+							"width": 52.1435546875,
+							"height": 88,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe6zL0QgBsVg="
+							}
+						},
+						{
+							"_type": "WFRadioView",
+							"_id": "AAAAAAGSe63MXQghEcs=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe63MXQgfw5c="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe63MXQgiSh8=",
+									"_parent": {
+										"$ref": "AAAAAAGSe63MXQghEcs="
+									},
+									"font": "Arial;13;0",
+									"left": 610,
+									"top": 1347,
+									"width": 50.5908203125,
+									"height": 13,
+									"text": "Verified?",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe6uS9wfqkwo="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 592,
+							"top": 1344,
+							"width": 68.5908203125,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe63MXQgiSh8="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe65VGQgyGZ0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe65VGAgwiug="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe65VGQgzqL8=",
+									"_parent": {
+										"$ref": "AAAAAAGSe65VGQgyGZ0="
+									},
+									"font": "Arial;13;0",
+									"left": 640,
+									"top": 1238,
+									"width": 40,
+									"height": 39,
+									"text": "Plan 2 for 30 days",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe6uS9wfqkwo="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 632,
+							"top": 1232,
+							"width": 56,
+							"height": 88,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe65VGQgzqL8="
+							}
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSe67KnQg+/a8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe67KnQg8fhk="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe67KnQg/fBI=",
+									"_parent": {
+										"$ref": "AAAAAAGSe67KnQg+/a8="
+									},
+									"font": "Arial;13;0",
+									"left": 584,
+									"top": 1384,
+									"width": 80,
+									"height": 13,
+									"text": "Apply ",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe6uS9wfqkwo="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 584,
+							"top": 1376,
+							"width": 80,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe67KnQg/fBI="
+							}
+						},
+						{
+							"_type": "WFLinkView",
+							"_id": "AAAAAAGSe67/xwhHwNQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe67/xwhFW8g="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe67/xwhIQaQ=",
+									"_parent": {
+										"$ref": "AAAAAAGSe67/xwhHwNQ="
+									},
+									"fontColor": "#2b71ff",
+									"font": "Arial;13;0",
+									"left": 576,
+									"top": 1408,
+									"width": 96,
+									"height": 13,
+									"underline": true,
+									"text": "Why sponsors?",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe6uS9wfqkwo="
+							},
+							"fontColor": "#2b71ff",
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 576,
+							"top": 1408,
+							"width": 96,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe67/xwhIQaQ="
+							}
+						},
+						{
+							"_type": "WFSeparatorView",
+							"_id": "AAAAAAGSe6+pQAhcZ8A=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe6+pQAhanoM="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 320,
+							"top": 1408,
+							"width": 256,
+							"height": 8
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSe7AItQhlTt8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSe7AwRwhsQmY="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 128,
+							"top": 1120,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe7AwRwhsQmY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7AwRwhq2BU="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7AwRwhtTQM=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7AwRwhsQmY="
+									},
+									"font": "Arial;13;0",
+									"left": 160,
+									"top": 1174,
+									"width": 112,
+									"height": 39,
+									"text": "Benefits for becoming a sponsor",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe7AItQhlTt8="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 152,
+							"top": 1168,
+							"width": 128,
+							"height": 248,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7AwRwhtTQM="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe7DcXwh2pxI=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7DcXgh0lc4="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7DcXwh32kA=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7DcXwh2pxI="
+									},
+									"font": "Arial;13;0",
+									"left": 168,
+									"top": 1238,
+									"width": 88,
+									"height": 65,
+									"text": "- First page guranteed        - First to test beta features -xyz",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 160,
+							"top": 1232,
+							"width": 104,
+							"height": 176,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7DcXwh32kA="
+							}
+						},
+						{
+							"_type": "WFSeparatorView",
+							"_id": "AAAAAAGSe7YUHwigFzs=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7YUHwieaYU="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1408,
+							"top": 1360,
+							"width": 440,
+							"height": 8
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSe7Z8HAir8EQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSe7clXgi06x4="
+								},
+								{
+									"$ref": "AAAAAAGSe7c3XQi5Ka8="
+								},
+								{
+									"$ref": "AAAAAAGSe7di9QjC29Q="
+								},
+								{
+									"$ref": "AAAAAAGSe7eL1QjJVBI="
+								},
+								{
+									"$ref": "AAAAAAGSe7gqfgjVIUo="
+								},
+								{
+									"$ref": "AAAAAAGSe7hAZQjaT2k="
+								},
+								{
+									"$ref": "AAAAAAGSe7njXgjjdQw="
+								},
+								{
+									"$ref": "AAAAAAGSe7n35QjoF7M="
+								},
+								{
+									"$ref": "AAAAAAGSe7pwpQj6FrA="
+								},
+								{
+									"$ref": "AAAAAAGSe72GgAkW1DI="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 1848,
+							"top": 1072,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe7clXgi06x4=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7clXQiyBtE="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1864,
+							"top": 1112,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe7c3XQi5Ka8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7c3XQi3l7A="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7c3XQi6U34=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7c3XQi5Ka8="
+									},
+									"font": "Arial;13;0",
+									"left": 1904,
+									"top": 1118,
+									"width": 96,
+									"height": 13,
+									"text": "No. of residents",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1896,
+							"top": 1112,
+							"width": 112,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7c3XQi6U34="
+							}
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe7di9QjC29Q=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7di9QjAe6U="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1864,
+							"top": 1160,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe7eL1QjJVBI=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7eL1QjHC/Y="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7eL1QjKCvQ=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7eL1QjJVBI="
+									},
+									"font": "Arial;13;0",
+									"left": 1904,
+									"top": 1166,
+									"width": 96,
+									"height": 13,
+									"text": "Empty residents",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1896,
+							"top": 1160,
+							"width": 112,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7eL1QjKCvQ="
+							}
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe7gqfgjVIUo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7gqfgjT5jo="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1864,
+							"top": 1208,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe7hAZQjaT2k=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7hAZQjYMlY="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7hAZQjbO/c=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7hAZQjaT2k="
+									},
+									"font": "Arial;13;0",
+									"left": 1904,
+									"top": 1214,
+									"width": 96,
+									"height": 13,
+									"text": "Resident's rent",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1896,
+							"top": 1208,
+							"width": 112,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7hAZQjbO/c="
+							}
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe7njXgjjdQw=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7njXgjhguY="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1864,
+							"top": 1256,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe7n35QjoF7M=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7n35QjmruY="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7n35QjpT6E=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7n35QjoF7M="
+									},
+									"font": "Arial;13;0",
+									"left": 1904,
+									"top": 1262,
+									"width": 96,
+									"height": 13,
+									"text": "Rent due",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1896,
+							"top": 1256,
+							"width": 112,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7n35QjpT6E="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe7pwpQj6FrA=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7pwpQj4CrU="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7pwpQj7+T0=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7pwpQj6FrA="
+									},
+									"font": "Arial;13;0",
+									"left": 1880,
+									"top": 1310,
+									"width": 120,
+									"height": 13,
+									"text": "Estimated return",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1872,
+							"top": 1304,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7pwpQj7+T0="
+							}
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSe72GgAkW1DI=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe72GgAkUt+Y="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe72GgAkXf6s=",
+									"_parent": {
+										"$ref": "AAAAAAGSe72GgAkW1DI="
+									},
+									"font": "Arial;13;0",
+									"left": 1896,
+									"top": 1360,
+									"width": 72,
+									"height": 13,
+									"text": "Back",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe7Z8HAir8EQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1896,
+							"top": 1352,
+							"width": 72,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe72GgAkXf6s="
+							}
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSe724zwke23Y=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSe73lCAkkAZU="
+								},
+								{
+									"$ref": "AAAAAAGSe737HgkpSp0="
+								},
+								{
+									"$ref": "AAAAAAGSe76tOAk3qWE="
+								},
+								{
+									"$ref": "AAAAAAGSe79gXwlurxQ="
+								},
+								{
+									"$ref": "AAAAAAGSe7+Flwlz4Js="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 1648,
+							"top": 1592,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe73lCAkkAZU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe73lBwkiI8k="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1664,
+							"top": 1648,
+							"width": 32,
+							"height": 32
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe737HgkpSp0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe737Hgkn5zg="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe737Hgkq2vY=",
+									"_parent": {
+										"$ref": "AAAAAAGSe737HgkpSp0="
+									},
+									"font": "Arial;13;0",
+									"left": 1720,
+									"top": 1630,
+									"width": 88,
+									"height": 26,
+									"text": "Name of guest Room no.",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1712,
+							"top": 1624,
+							"width": 104,
+							"height": 38,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe737Hgkq2vY="
+							}
+						},
+						{
+							"_type": "WFRadioView",
+							"_id": "AAAAAAGSe76tOAk3qWE=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe76tNwk1i5w="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe76tOAk4MYQ=",
+									"_parent": {
+										"$ref": "AAAAAAGSe76tOAk3qWE="
+									},
+									"font": "Arial;13;0",
+									"left": 1738,
+									"top": 1667,
+									"width": 78,
+									"height": 13,
+									"text": "Rent paid",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1720,
+							"top": 1664,
+							"width": 96,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe76tOAk4MYQ="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe78DhQlIXrc=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe737Hgkn5zg="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe78DhQlJ6Vo=",
+									"_parent": {
+										"$ref": "AAAAAAGSe78DhQlIXrc="
+									},
+									"font": "Arial;13;0",
+									"left": 1722,
+									"top": 1705,
+									"width": 88,
+									"height": 26,
+									"text": "Name of guest Room no.",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1714,
+							"top": 1699,
+							"width": 104,
+							"height": 38,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe78DhQlJ6Vo="
+							}
+						},
+						{
+							"_type": "WFRadioView",
+							"_id": "AAAAAAGSe78DhQlK9JI=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe76tNwk1i5w="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe78DhQlLfo8=",
+									"_parent": {
+										"$ref": "AAAAAAGSe78DhQlK9JI="
+									},
+									"font": "Arial;13;0",
+									"left": 1732,
+									"top": 1742,
+									"width": 78,
+									"height": 13,
+									"text": "Rent paid",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1714,
+							"top": 1739,
+							"width": 96,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe78DhQlLfo8="
+							}
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe78DhQlMZ7U=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe73lBwkiI8k="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1664,
+							"top": 1723,
+							"width": 32,
+							"height": 32
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe784DwldFzs=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe737Hgkn5zg="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe784DwleaWU=",
+									"_parent": {
+										"$ref": "AAAAAAGSe784DwldFzs="
+									},
+									"font": "Arial;13;0",
+									"left": 1722,
+									"top": 1777,
+									"width": 88,
+									"height": 26,
+									"text": "Name of guest Room no.",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1714,
+							"top": 1771,
+							"width": 104,
+							"height": 38,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe784DwleaWU="
+							}
+						},
+						{
+							"_type": "WFRadioView",
+							"_id": "AAAAAAGSe784DwlfEyI=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe76tNwk1i5w="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe784DwlgcO0=",
+									"_parent": {
+										"$ref": "AAAAAAGSe784DwlfEyI="
+									},
+									"font": "Arial;13;0",
+									"left": 1732,
+									"top": 1814,
+									"width": 78,
+									"height": 13,
+									"text": "Rent paid",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1714,
+							"top": 1811,
+							"width": 96,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe784DwlgcO0="
+							}
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe784DwlhrN8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe73lBwkiI8k="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1664,
+							"top": 1795,
+							"width": 32,
+							"height": 32
+						},
+						{
+							"_type": "WFPanelView",
+							"_id": "AAAAAAGSe79gXwlurxQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe79gXwlsKJA="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSe8CpJwmpSJk="
+								},
+								{
+									"$ref": "AAAAAAGSe8C7FgmuUmg="
+								},
+								{
+									"$ref": "AAAAAAGSe8EzYAm9PPg="
+								},
+								{
+									"$ref": "AAAAAAGSe8FQUQnGyHY="
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1672,
+							"top": 1848,
+							"width": 136,
+							"height": 56
+						},
+						{
+							"_type": "WFCheckboxView",
+							"_id": "AAAAAAGSe7+Flwlz4Js=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7+FlwlxPR8="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7+Flwl0vE8=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7+Flwlz4Js="
+									},
+									"font": "Arial;13;0",
+									"left": 1690,
+									"top": 1634,
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1672,
+							"top": 1624,
+							"width": 18,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7+Flwl0vE8="
+							}
+						},
+						{
+							"_type": "WFCheckboxView",
+							"_id": "AAAAAAGSe7/Q1AmDVUw=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7+FlwlxPR8="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7/Q1AmEd5s=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7/Q1AmDVUw="
+									},
+									"font": "Arial;13;0",
+									"left": 1690,
+									"top": 1714,
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1672,
+							"top": 1704,
+							"width": 18,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7/Q1AmEd5s="
+							}
+						},
+						{
+							"_type": "WFCheckboxView",
+							"_id": "AAAAAAGSe7/erAmNEqU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7+FlwlxPR8="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe7/erAmOLSQ=",
+									"_parent": {
+										"$ref": "AAAAAAGSe7/erAmNEqU="
+									},
+									"font": "Arial;13;0",
+									"left": 1690,
+									"top": 1786,
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe724zwke23Y="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1672,
+							"top": 1776,
+							"width": 18,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe7/erAmOLSQ="
+							}
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSe8AhmAmYpQk=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8AhmAmWEYQ="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8AhmAmZ6ws=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8AhmAmYpQk="
+									},
+									"font": "Arial;13;0",
+									"left": 1504,
+									"top": 1624,
+									"width": 152,
+									"height": 13,
+									"text": "To remove guest",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1504,
+							"top": 1624,
+							"width": 152,
+							"height": 56,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8AhmAmZ6ws="
+							}
+						},
+						{
+							"_type": "WFSeparatorView",
+							"_id": "AAAAAAGSe8BenwmjVSY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8Benwmh6PY="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1600,
+							"top": 1624,
+							"width": 72,
+							"height": 8
+						},
+						{
+							"_type": "WFSwitchView",
+							"_id": "AAAAAAGSe8CpJwmpSJk=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8CpJwmn62I="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe79gXwlurxQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1680,
+							"top": 1856,
+							"width": 26,
+							"height": 16
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSe8C7FgmuUmg=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8C7FgmsQFg="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8C7FgmvLaE=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8C7FgmuUmg="
+									},
+									"font": "Arial;13;0",
+									"left": 1712,
+									"top": 1856,
+									"width": 88,
+									"height": 13,
+									"text": "Paid or Unpaid",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe79gXwlurxQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1712,
+							"top": 1856,
+							"width": 88,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8C7FgmvLaE="
+							}
+						},
+						{
+							"_type": "WFCheckboxView",
+							"_id": "AAAAAAGSe8EzYAm9PPg=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe7+FlwlxPR8="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8EzYAm+65Q=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8EzYAm9PPg="
+									},
+									"font": "Arial;13;0",
+									"left": 1706,
+									"top": 1890,
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe79gXwlurxQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1688,
+							"top": 1880,
+							"width": 18,
+							"height": 16,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8EzYAm+65Q="
+							}
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSe8FQUQnGyHY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8FQUQnEkkA="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8FQUQnHh9g=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8FQUQnGyHY="
+									},
+									"font": "Arial;13;0",
+									"left": 1712,
+									"top": 1880,
+									"width": 80,
+									"height": 13,
+									"text": "Select all",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe79gXwlurxQ="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1712,
+							"top": 1880,
+							"width": 80,
+							"height": 24,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8FQUQnHh9g="
+							}
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSe8KmHwnoOIk=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1360:1360;1659:1607"
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSe8QLaQop0p0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSd+XfgB7KeEM="
+								},
+								{
+									"$ref": "AAAAAAGSd+XfgB7JDsw="
+								},
+								{
+									"$ref": "AAAAAAGSe8YZGAp3rss="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 1504,
+							"top": 416,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFButtonView",
+							"_id": "AAAAAAGSd+XfgB7KeEM=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9vrCx1Op+I="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSd+XfgB7L9oU=",
+									"_parent": {
+										"$ref": "AAAAAAGSd+XfgB7KeEM="
+									},
+									"font": "Arial;13;0",
+									"left": 1528,
+									"top": 648,
+									"width": 136,
+									"height": 13,
+									"text": "List Of Rooms➡️",
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe8QLaQop0p0="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1528,
+							"top": 640,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSd+XfgB7L9oU="
+							}
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSd+XfgB7JDsw=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9smYR04PW0="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe8QLaQop0p0="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1560,
+							"top": 464,
+							"width": 80,
+							"height": 80
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSe8TLIQo3RL0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1592:656;1430:921"
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe8YZGAp3rss=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8YZFwp1Dwo="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8YZGAp4Vvw=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8YZGAp3rss="
+									},
+									"font": "Arial;13;0",
+									"left": 1536,
+									"top": 550,
+									"width": 120,
+									"height": 13,
+									"text": "Hostel Name",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe8QLaQop0p0="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1528,
+							"top": 544,
+							"width": 136,
+							"height": 56,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8YZGAp4Vvw="
+							}
+						},
+						{
+							"_type": "FreelineEdgeView",
+							"_id": "AAAAAAGSe8fs0AqMwZ8=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"lineStyle": 1,
+							"points": "1384:3048;1736:2873"
+						},
+						{
+							"_type": "WFMobileFrameView",
+							"_id": "AAAAAAGSe8ggTwqQ2Ew=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"containedViews": [
+								{
+									"$ref": "AAAAAAGSe8g/mAqWzEQ="
+								},
+								{
+									"$ref": "AAAAAAGSe8mDOAq3JRQ="
+								},
+								{
+									"$ref": "AAAAAAGSe8nosArDZ7s="
+								},
+								{
+									"$ref": "AAAAAAGSe8q4QArcCso="
+								},
+								{
+									"$ref": "AAAAAAGSe8w1ugsfV18="
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 1736,
+							"top": 2656,
+							"width": 184,
+							"height": 344
+						},
+						{
+							"_type": "WFTextView",
+							"_id": "AAAAAAGSe8g/mAqWzEQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8g/lwqUJPo="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8g/mAqXZjw=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8g/mAqWzEQ="
+									},
+									"font": "Arial;13;0",
+									"left": 1752,
+									"top": 2696,
+									"width": 96,
+									"height": 13,
+									"text": "Recommended",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe8ggTwqQ2Ew="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1752,
+							"top": 2696,
+							"width": 96,
+							"height": 13,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8g/mAqXZjw="
+							}
+						},
+						{
+							"_type": "EllipseView",
+							"_id": "AAAAAAGSe8idYAqg8Zo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1896,
+							"top": 2680,
+							"width": 16,
+							"height": 16
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGSe8jxAQqpnHs=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1944,
+							"top": 2672,
+							"width": 38.88818359375,
+							"height": 25,
+							"text": "Fliter "
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSe8lPDgqx0P0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSe8jxAQqpnHs="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSe8idYAqg8Zo="
+							},
+							"lineStyle": 1,
+							"points": "1913:2687;1943:2685"
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe8mDOAq3JRQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8mDNwq1L28="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8mDOAq4esc=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8mDOAq3JRQ="
+									},
+									"font": "Arial;13;0",
+									"left": 1784,
+									"top": 2726,
+									"width": 120,
+									"height": 13,
+									"text": "Sponsored Hostel 1",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe8ggTwqQ2Ew="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1776,
+							"top": 2720,
+							"width": 136,
+							"height": 56,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8mDOAq4esc="
+							}
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe8nosArDZ7s=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8nosArBqAo="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe8ggTwqQ2Ew="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1744,
+							"top": 2728,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "EllipseView",
+							"_id": "AAAAAAGSe8pJfgrRQZE=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1880,
+							"top": 2752,
+							"width": 16,
+							"height": 16
+						},
+						{
+							"_type": "EllipseView",
+							"_id": "AAAAAAGSe8pYDwrW5WM=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1784,
+							"top": 2752,
+							"width": 16,
+							"height": 16
+						},
+						{
+							"_type": "WFDropdownView",
+							"_id": "AAAAAAGSe8q4QArcCso=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8q4QAraq2c="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8q4QArdEvA=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8q4QArcCso="
+									},
+									"font": "Arial;13;0",
+									"left": 1784,
+									"top": 2782,
+									"width": 120,
+									"height": 13,
+									"text": "Address",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe8ggTwqQ2Ew="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1776,
+							"top": 2776,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8q4QArdEvA="
+							}
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGSe8sJWArkWsQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1616,
+							"top": 2752,
+							"width": 47.578125,
+							"height": 25,
+							"text": "Rating"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSe8svwQrqUMU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSe8sJWArkWsQ="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSe8pYDwrW5WM="
+							},
+							"lineStyle": 1,
+							"points": "1783:2760;1665:2763"
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGSe8tEiQrtDNw=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 2000,
+							"top": 2752,
+							"width": 80,
+							"height": 38,
+							"text": "Pictures and Info"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGSe8tx+QryM8w=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAGSe8tEiQrtDNw="
+							},
+							"tail": {
+								"$ref": "AAAAAAGSe8pJfgrRQZE="
+							},
+							"lineStyle": 1,
+							"points": "1897:2761;1999:2768"
+						},
+						{
+							"_type": "WFAvatarView",
+							"_id": "AAAAAAGSe8vf7AsGB34=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8nosArBqAo="
+							},
+							"containerView": {
+								"$ref": "AAAAAAGSe8ggTwqQ2Ew="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1742,
+							"top": 2834,
+							"width": 24,
+							"height": 24
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe8vf7AsHmXQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8mDNwq1L28="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8vf7AsIZM8=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8vf7AsHmXQ="
+									},
+									"font": "Arial;13;0",
+									"left": 1782,
+									"top": 2832,
+									"width": 120,
+									"height": 13,
+									"text": "Sponsored Hostel 1",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe8ggTwqQ2Ew="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1774,
+							"top": 2826,
+							"width": 136,
+							"height": 56,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8vf7AsIZM8="
+							}
+						},
+						{
+							"_type": "EllipseView",
+							"_id": "AAAAAAGSe8vf7AsJYrk=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1782,
+							"top": 2858,
+							"width": 16,
+							"height": 16
+						},
+						{
+							"_type": "EllipseView",
+							"_id": "AAAAAAGSe8vf7AsKrl4=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"font": "Arial;13;0",
+							"left": 1878,
+							"top": 2858,
+							"width": 16,
+							"height": 16
+						},
+						{
+							"_type": "WFDropdownView",
+							"_id": "AAAAAAGSe8vf7AsLMAQ=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8q4QAraq2c="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8vf7AsMQH4=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8vf7AsLMAQ="
+									},
+									"font": "Arial;13;0",
+									"left": 1782,
+									"top": 2888,
+									"width": 120,
+									"height": 13,
+									"text": "Address",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe8ggTwqQ2Ew="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1774,
+							"top": 2882,
+							"width": 136,
+							"height": 25,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8vf7AsMQH4="
+							}
+						},
+						{
+							"_type": "WFInputView",
+							"_id": "AAAAAAGSe8w1ugsfV18=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9mppB0cYUE="
+							},
+							"model": {
+								"$ref": "AAAAAAGSe8w1uQsd1A4="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGSe8w1ugsgHH0=",
+									"_parent": {
+										"$ref": "AAAAAAGSe8w1ugsfV18="
+									},
+									"font": "Arial;13;0",
+									"left": 1760,
+									"top": 2934,
+									"width": 136,
+									"height": 26,
+									"text": "Area opted for and price range",
+									"horizontalAlignment": 0,
+									"wordWrap": true
+								}
+							],
+							"containerView": {
+								"$ref": "AAAAAAGSe8ggTwqQ2Ew="
+							},
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 1752,
+							"top": 2928,
+							"width": 152,
+							"height": 40,
+							"nameLabel": {
+								"$ref": "AAAAAAGSe8w1ugsgHH0="
+							}
+						}
+					]
+				},
+				{
+					"_type": "WFMobileFrame",
+					"_id": "AAAAAAGSd9neZB0gsT8=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "MobileFrame1",
+					"ownedElements": [
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSd9uT0x1Beow=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel Name"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSd+Fg2R4P6i4=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel Description"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSd+Hcsh4eq0A=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel Address Line 1"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSd+M56B49iSw=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel State"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSd+NTcB5GVhc=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel City"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSd+NpmB5P0nc=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel PinCode"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSd+OMER5YwE0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel email"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSd+OjaR5hS5Y=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel PhoneNumber"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSd+O5wh5qrAU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel Name"
+						},
+						{
+							"_type": "WFCheckbox",
+							"_id": "AAAAAAGSd+ZiGx7giEE=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "This is Whatsapp Number"
+						},
+						{
+							"_type": "WFButton",
+							"_id": "AAAAAAGSd+/w7x9y7J0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "List Of Aminities➡️"
+						},
+						{
+							"_type": "WFPanel",
+							"_id": "AAAAAAGSd/9iICBN+qU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Panel1",
+							"ownedElements": [
+								{
+									"_type": "WFSwitch",
+									"_id": "AAAAAAGSeAENpyBWlI0=",
+									"_parent": {
+										"$ref": "AAAAAAGSd/9iICBN+qU="
+									},
+									"name": "Switch1"
+								}
+							]
+						},
+						{
+							"_type": "WFImage",
+							"_id": "AAAAAAGSe6wXhgfuBDM=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Image1"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe6zL0Af+51Y=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Plan 1 for 60 days"
+						},
+						{
+							"_type": "WFRadio",
+							"_id": "AAAAAAGSe63MXQgfw5c=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Verified?"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe65VGAgwiug=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Plan 2 for 30 days"
+						},
+						{
+							"_type": "WFButton",
+							"_id": "AAAAAAGSe67KnQg8fhk=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Apply "
+						},
+						{
+							"_type": "WFLink",
+							"_id": "AAAAAAGSe67/xwhFW8g=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Why sponsors?"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe7AwRwhq2BU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Benefits for becoming a sponsor"
+						},
+						{
+							"_type": "WFAvatar",
+							"_id": "AAAAAAGSe7clXQiyBtE=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Avatar2"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe7c3XQi3l7A=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "No. of residents"
+						},
+						{
+							"_type": "WFAvatar",
+							"_id": "AAAAAAGSe7di9QjAe6U=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Avatar3"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe7eL1QjHC/Y=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Empty residents"
+						},
+						{
+							"_type": "WFAvatar",
+							"_id": "AAAAAAGSe7gqfgjT5jo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Avatar4"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe7hAZQjYMlY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Resident's rent"
+						},
+						{
+							"_type": "WFAvatar",
+							"_id": "AAAAAAGSe7njXgjhguY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Avatar5"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe7n35QjmruY=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Rent due"
+						},
+						{
+							"_type": "WFAvatar",
+							"_id": "AAAAAAGSe7owTgjvrJk=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Avatar6"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe7pwpQj4CrU=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Estimated return"
+						},
+						{
+							"_type": "WFButton",
+							"_id": "AAAAAAGSe72GgAkUt+Y=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Back"
+						},
+						{
+							"_type": "WFAvatar",
+							"_id": "AAAAAAGSe73lBwkiI8k=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Avatar7"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe737Hgkn5zg=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Name of guest Room no."
+						},
+						{
+							"_type": "WFRadio",
+							"_id": "AAAAAAGSe76tNwk1i5w=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Rent paid"
+						},
+						{
+							"_type": "WFPanel",
+							"_id": "AAAAAAGSe79gXwlsKJA=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Panel2",
+							"ownedElements": [
+								{
+									"_type": "WFSwitch",
+									"_id": "AAAAAAGSe8CpJwmn62I=",
+									"_parent": {
+										"$ref": "AAAAAAGSe79gXwlsKJA="
+									},
+									"name": "Switch1"
+								},
+								{
+									"_type": "WFText",
+									"_id": "AAAAAAGSe8C7FgmsQFg=",
+									"_parent": {
+										"$ref": "AAAAAAGSe79gXwlsKJA="
+									},
+									"name": "Paid or Unpaid"
+								},
+								{
+									"_type": "WFCheckbox",
+									"_id": "AAAAAAGSe7+FlwlxPR8=",
+									"_parent": {
+										"$ref": "AAAAAAGSe79gXwlsKJA="
+									}
+								},
+								{
+									"_type": "WFText",
+									"_id": "AAAAAAGSe8FQUQnEkkA=",
+									"_parent": {
+										"$ref": "AAAAAAGSe79gXwlsKJA="
+									},
+									"name": "Select all"
+								}
+							]
+						},
+						{
+							"_type": "WFButton",
+							"_id": "AAAAAAGSd9vrCx1Op+I=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "List Of Rooms➡️"
+						},
+						{
+							"_type": "WFAvatar",
+							"_id": "AAAAAAGSd9smYR04PW0=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Avatar1"
+						},
+						{
+							"_type": "WFText",
+							"_id": "AAAAAAGSe8UMSQo6k5U=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel Name"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe8YZFwp1Dwo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Hostel Name"
+						},
+						{
+							"_type": "WFText",
+							"_id": "AAAAAAGSe8g/lwqUJPo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Recommended"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe8mDNwq1L28=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Sponsored Hostel 1"
+						},
+						{
+							"_type": "WFAvatar",
+							"_id": "AAAAAAGSe8nosArBqAo=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Avatar8"
+						},
+						{
+							"_type": "WFDropdown",
+							"_id": "AAAAAAGSe8q4QAraq2c=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Address"
+						},
+						{
+							"_type": "WFSeparator",
+							"_id": "AAAAAAGSe8usVwr1p1w=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Separator1"
+						},
+						{
+							"_type": "WFInput",
+							"_id": "AAAAAAGSe8w1uQsd1A4=",
+							"_parent": {
+								"$ref": "AAAAAAGSd9neZB0gsT8="
+							},
+							"name": "Area opted for and price range"
+						}
+					]
+				},
+				{
+					"_type": "WFMobileFrame",
+					"_id": "AAAAAAGSd9nx5B0loNg=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "MobileFrame2"
+				},
+				{
+					"_type": "WFInput",
+					"_id": "AAAAAAGSd+KEjB4spC0=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Hostel Address Line 2"
+				},
+				{
+					"_type": "WFInput",
+					"_id": "AAAAAAGSd+Pcch5zdpA=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Input1"
+				},
+				{
+					"_type": "Hyperlink",
+					"_id": "AAAAAAGSd+ftkR7+2/E=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Hyperlink1"
+				},
+				{
+					"_type": "WFSeparator",
+					"_id": "AAAAAAGSd+jFdR8dowU=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Separator1"
+				},
+				{
+					"_type": "WFTabList",
+					"_id": "AAAAAAGSd+jz/R8kVgE=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "TabList1"
+				},
+				{
+					"_type": "WFDropdown",
+					"_id": "AAAAAAGSd+kqfh8sb0A=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "sadsa"
+				},
+				{
+					"_type": "WFSlider",
+					"_id": "AAAAAAGSd+lz5x85TYs=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Slider1"
+				},
+				{
+					"_type": "WFFrame",
+					"_id": "AAAAAAGSd+mTVx9AWdo=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Frame1"
+				},
+				{
+					"_type": "WFMobileFrame",
+					"_id": "AAAAAAGSd/sz+CAAtic=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "MobileFrame3"
+				},
+				{
+					"_type": "WFAvatar",
+					"_id": "AAAAAAGSd/vUeyASxf4=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Avatar1"
+				},
+				{
+					"_type": "WFAvatar",
+					"_id": "AAAAAAGSd/vZEyAXt3A=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Avatar2"
+				},
+				{
+					"_type": "WFAvatar",
+					"_id": "AAAAAAGSd/vcKyAcUz8=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Avatar3"
+				},
+				{
+					"_type": "WFAvatar",
+					"_id": "AAAAAAGSd/vj+yAhFsk=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Avatar4"
+				},
+				{
+					"_type": "WFAvatar",
+					"_id": "AAAAAAGSd/vmhSAm/Kg=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Avatar5"
+				},
+				{
+					"_type": "WFAvatar",
+					"_id": "AAAAAAGSd/v3VyArH6U=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Avatar6"
+				},
+				{
+					"_type": "WFSwitch",
+					"_id": "AAAAAAGSeAEU1yBbG80=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Switch2"
+				},
+				{
+					"_type": "WFText",
+					"_id": "AAAAAAGSeAFfsCBjhpE=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "This is to toggle between admin and user view"
+				},
+				{
+					"_type": "WFMobileFrame",
+					"_id": "AAAAAAGSeAifYyB0v6w=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "MobileFrame4"
+				},
+				{
+					"_type": "WFText",
+					"_id": "AAAAAAGSeAi9OyB8sH8=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "This is for forcasting the revenue in the month"
+				},
+				{
+					"_type": "WFText",
+					"_id": "AAAAAAGSeAk8BSCHwMU=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "This is for seeing the list of user staying in the paying guest"
+				},
+				{
+					"_type": "WFText",
+					"_id": "AAAAAAGSeAotQSCUf8U=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "This is to get the AI Analatics/ Data science analatics"
+				},
+				{
+					"_type": "WFText",
+					"_id": "AAAAAAGSeAqnKiCh9pI=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "This Page is to sponser ads & verification process of the Hostel"
+				},
+				{
+					"_type": "WFText",
+					"_id": "AAAAAAGSeAuVNiC5aMo=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Same UI as the master one and can be for admina nd user"
+				},
+				{
+					"_type": "WFText",
+					"_id": "AAAAAAGSeAvy3yDEipo=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "same as the previous one for both admin and user"
+				},
+				{
+					"_type": "WFSeparator",
+					"_id": "AAAAAAGSe6rWbwfdkJA=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Separator2"
+				},
+				{
+					"_type": "WFAvatar",
+					"_id": "AAAAAAGSe6xJpQfzGEo=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Avatar7"
+				},
+				{
+					"_type": "WFSeparator",
+					"_id": "AAAAAAGSe6+pQAhanoM=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Separator3"
+				},
+				{
+					"_type": "WFInput",
+					"_id": "AAAAAAGSe7DcXgh0lc4=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "- First page guranteed        - First to test beta features -xyz"
+				},
+				{
+					"_type": "WFSeparator",
+					"_id": "AAAAAAGSe7NmbwiGpEk=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Separator4"
+				},
+				{
+					"_type": "WFFrame",
+					"_id": "AAAAAAGSe7WA+AiWKMc=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Frame2"
+				},
+				{
+					"_type": "WFSeparator",
+					"_id": "AAAAAAGSe7YUHwieaYU=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Separator5"
+				},
+				{
+					"_type": "WFText",
+					"_id": "AAAAAAGSe8AhmAmWEYQ=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "To remove guest"
+				},
+				{
+					"_type": "WFSeparator",
+					"_id": "AAAAAAGSe8Benwmh6PY=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Separator6"
+				},
+				{
+					"_type": "WFSeparator",
+					"_id": "AAAAAAGSe8HjGQnXCiE=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Separator7"
+				},
+				{
+					"_type": "WFText",
+					"_id": "AAAAAAGSe8WrXwpgQCM=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "    Hostel Name"
+				},
+				{
+					"_type": "WFSeparator",
+					"_id": "AAAAAAGSe8fLTwqF6K4=",
+					"_parent": {
+						"$ref": "AAAAAAGSd9mppB0b3yA="
+					},
+					"name": "Separator8"
+				}
+			]
+		}
+	]
+}
