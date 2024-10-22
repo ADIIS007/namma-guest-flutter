@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:namma_guest/Screens/User/map_page.dart';
 import 'package:namma_guest/Screens/User/user_list_page.dart';
+import 'package:namma_guest/Screens/User/user_profile_page.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class UserPage extends StatefulWidget {
@@ -14,7 +15,7 @@ class _UserPageState extends State<UserPage> {
   final List<Widget> _pages = [
     const MapPage(),
     const UserListPage(),
-    ProfilePage(),
+    const UserProfilePage(),
   ];
 
   @override
@@ -84,14 +85,5 @@ class _UserPageState extends State<UserPage> {
     } else if(status.isPermanentlyDenied){
       openAppSettings();
     }
-  }
-}
-
-class ProfilePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Profile Page'),
-    );
   }
 }
