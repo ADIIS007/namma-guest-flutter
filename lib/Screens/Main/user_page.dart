@@ -15,7 +15,7 @@ class _UserPageState extends State<UserPage> {
   final List<Widget> _pages = [
     const MapPage(),
     const UserListPage(),
-    const UserProfilePage(),
+    UserProfilePage(),
   ];
 
   @override

@@ -1,86 +1,296 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class UserProfilePage extends StatelessWidget {
-  const UserProfilePage({super.key});
+  UserProfilePage({super.key});
 
+  final TextEditingController _amountController = TextEditingController();
 
   final String userName = "John Doe";
   final String userEmail = "john.doe@example.com";
-  final String userBio = "Flutter developer and tech enthusiast.";
-  final String userImageUrl =
-      "https://www.example.com/profile_picture.png";
+  final String phoneNumber = "7075955169";
+  final String userImageUrl = 'https://media.licdn.com/dms/image/v2/D5603AQHBpp0P22tz1w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724932714830?e=1736380800&v=beta&t=2oJCcmrS1jhShPrbSWNPIH-jMSs7RTaf1MTT3ud8sTY';
+
+  final List<Map<String, String>> developers = [
+    {
+      'Position': 'Principal Developer',
+      'name': 'ADIIS007',
+      'link': 'https://www.linkedin.com/in/athithya-ithayan-4891151bb/',
+      'Bio': 'Full stack Java & Flutter developer',
+      'pic':
+          'https://media.licdn.com/dms/image/v2/D5603AQGqTE0_jDm4Uw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714451350660?e=1736380800&v=beta&t=jJyXC6YSQXiY86rUSv-TI8XB5hoxQUUF5-WlJn2KSp0'
+    },
+    {
+      'Position': 'Managing Developer',
+      'name': 'Developer 2',
+      'link': 'https://linkedin.com/in/developer2',
+      'Bio': 'Full stack Java & Flutter developer',
+      'pic':
+          'https://media.licdn.com/dms/image/v2/D5603AQGqTE0_jDm4Uw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714451350660?e=1736380800&v=beta&t=jJyXC6YSQXiY86rUSv-TI8XB5hoxQUUF5-WlJn2KSp0'
+    },
+    {
+      'Position': 'Sr Developer',
+      'name': 'Developer 3',
+      'link': 'https://linkedin.com/in/developer3',
+      'Bio': 'Full stack Java & Flutter developer',
+      'pic':
+          'https://media.licdn.com/dms/image/v2/D5603AQGqTE0_jDm4Uw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714451350660?e=1736380800&v=beta&t=jJyXC6YSQXiY86rUSv-TI8XB5hoxQUUF5-WlJn2KSp0'
+    },
+    {
+      'Position': 'Associate Developer',
+      'name': 'Developer 4',
+      'link': 'https://linkedin.com/in/developer4',
+      'Bio': 'Full stack Java & Flutter developer',
+      'pic':
+          'https://media.licdn.com/dms/image/v2/D5603AQGqTE0_jDm4Uw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714451350660?e=1736380800&v=beta&t=jJyXC6YSQXiY86rUSv-TI8XB5hoxQUUF5-WlJn2KSp0'
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("User Profile"),
-        centerTitle: true,
+        leading: const Icon(Icons.help),
+        title: const Center(child: Text('User Profile')),
       ),
-      body: Center(
-        child: Card(
-          elevation: 8,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
+      body: SingleChildScrollView(
+          child: Center(
+              child: Column(
+                children: [
+                profile(context),
+                const SizedBox(height: 16),
+                developer(context),
+                const SizedBox(height: 16),
+                donate(context),
+                ],
+              )
+          )
+      ),
+    );
+  }
+
+  Widget profile(BuildContext context) {
+    return Center(
+      child: Card(
+        elevation: 8,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(userImageUrl),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                userName,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                userEmail,
+                style: const TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                phoneNumber,
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 16),
+              ),
+              const SizedBox(height: 8),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                      Icons.verified,
+                      color: Colors.green
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    'Verified',
+                    style: TextStyle( fontSize: 18, fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {
+                  // Add functionality here
+                },
+                style: ElevatedButton.styleFrom(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: const Text("Edit Profile"),
+              ),
+            ],
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
+        ),
+      ),
+    );
+  }
+
+  Widget developer(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: developers.map((developerItem) {
+          return Container(
+            margin: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey),
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.white,
+            ),
             child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CircleAvatar(
                   radius: 50,
-                  backgroundImage: NetworkImage(userImageUrl),
+                  backgroundImage: NetworkImage(developerItem['pic'] ??
+                      'https://media.licdn.com/dms/image/v2/C4D07AQGqZ1PBhLQe7w/group-logo_image-shrink_92x92/group-logo_image-shrink_92x92/0/1630999644296?e=1731769200&v=beta&t=OD8V_OtkxtnWw_1ZxUHGrt8rMzx5Ql9K1onnqdoB8nM'),
                 ),
-                SizedBox(height: 16),
                 Text(
-                  userName,
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  developerItem['name']!,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 8),
-                Text(
-                  userEmail,
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey,
-                  ),
-                ),
-                SizedBox(height: 16),
-                Text(
-                  "Bio",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 8),
-                Text(
-                  userBio,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16),
-                ),
-                SizedBox(height: 16),
-                ElevatedButton(
-                  onPressed: () {
-                    // Add functionality here
+                const SizedBox(height: 5),
+                GestureDetector(
+                  onTap: () {
+                    _launchUrl(developerItem['link']!);
                   },
-                  child: Text("Edit Profile"),
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+                  child: const Text(
+                    'LinkedIn Profile',
+                    style: TextStyle(fontSize: 14, color: Colors.blue),
                   ),
                 ),
               ],
             ),
-          ),
+          );
+        }).toList(),
+      ),
+    );
+  }
+
+  Widget donate(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(7.0),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey),
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.white,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                      Icons.live_help_outlined,
+                      color: Colors.grey
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    'Donate to the Project',
+                    style: TextStyle( fontSize: 18, fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+            ),
+            const Padding(
+              padding: EdgeInsets.all(12.0),
+              child: Center(
+                child: Text(
+                  'This takes a lot of effort to create and maintain some of the open source project you can share the cost with donations',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black38,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 7.0),
+              child: TextField(
+                controller: _amountController,
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.attach_money),
+                  labelText: 'Enter amount',
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.grey,
+                      width: 2,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 7),
+            ElevatedButton(
+              onPressed: () {
+                _showToast(_amountController.text);
+              },
+              style: ElevatedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(
+                    color: Colors.grey,
+                    width: 2,
+                  ),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Text(
+                'Donate',
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+            const SizedBox(height: 10),
+          ],
         ),
       ),
+    );
+  }
+
+  void _launchUrl(String url) {
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      launch(url);
+    } else {
+      throw Exception("Invalid URL.");
+    }
+  }
+
+  void _showToast(String message) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.black,
+      textColor: Colors.white,
+      fontSize: 16.0,
     );
   }
 }
