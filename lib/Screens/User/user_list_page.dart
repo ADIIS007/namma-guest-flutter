@@ -10,6 +10,7 @@ class UserListPage extends StatefulWidget {
 }
 
 class _UserListPageState extends State<UserListPage> {
+  double _sizeOfFilterMenu = 0;
   String _searchQuery = '';
   String _selectedFilter = 'All';
   final List<PayingGuestListModel> _items = List.generate(100, (index) =>
@@ -37,13 +38,6 @@ class _UserListPageState extends State<UserListPage> {
       item.name.toLowerCase().contains(query.toLowerCase()) &&
           (_selectedFilter == 'All' || item.name.contains(_selectedFilter)))
           .toList();
-    });
-  }
-
-  void _selectFilter(String filter) {
-    setState(() {
-      _selectedFilter = filter;
-      _filterItems(_searchQuery);
     });
   }
 
@@ -91,7 +85,7 @@ class _UserListPageState extends State<UserListPage> {
                     ),
                   ),
                   ElevatedButton(
-                      onPressed: _onFilterPress(),
+                      onPressed: _onFilterPress,
                       style: ElevatedButton.styleFrom(
                         elevation: 8,
                         shape: RoundedRectangleBorder(
@@ -116,10 +110,106 @@ class _UserListPageState extends State<UserListPage> {
               ),
             ],
           ),
+          DraggableScrollableSheet(
+              initialChildSize: _sizeOfFilterMenu,
+              minChildSize: 0,
+              maxChildSize: 0.5,
+              builder: (BuildContext context,ScrollController scrollController){
+                return Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(25),
+                    border: const Border(
+                      top: BorderSide(
+                        color: Colors.black
+                      )
+                    )
+                  ),
+                  child: ListView(
+                  children: const [
+                    Text("Tadaaaaaaaaaa 1"),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                    ),
+                    Text("Tadaaaaaaaaaa 2"),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                    ),
+                    Text("Tadaaaaaaaaaa 3"),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                    ),
+                    Text("Tadaaaaaaaaaa 4"),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                    ),
+                    Text("Tadaaaaaaaaaa 5"),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                    ),
+                    Text("Tadaaaaaaaaaa 6"),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                    ),
+                    Text("Tadaaaaaaaaaa 7"),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                    ),
+                    Text("Tadaaaaaaaaaa 8"),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                    ),
+                    Text("Tadaaaaaaaaaa 9"),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                    ),
+                  ],
+                  ),
+                );
+              }
+          )
         ]
       ),
     );
   }
 
-  _onFilterPress() {}
+  void _onFilterPress() {
+    if(_sizeOfFilterMenu==0) {
+      setState(() {
+        _sizeOfFilterMenu = 0.4;
+      });
+    } else {
+      setState(() {
+        _sizeOfFilterMenu = 0;
+      });
+    }
+  }
 }
