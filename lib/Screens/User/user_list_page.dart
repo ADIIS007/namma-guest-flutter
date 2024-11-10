@@ -69,57 +69,57 @@ class _UserListPageState extends State<UserListPage> {
               ),
             ),
           ),
-          title: const Text('OpenStreetMap Example')),
-      body: Column(
+          title: const Text('OpenStreetMap Example')
+      ),
+      body: Stack(
         children: <Widget>[
-          Row(
+          Column(
             children: <Widget>[
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextField(
-                    onChanged: _filterItems,
-                    decoration: const InputDecoration(
-                      hintText: 'Search...',
-                      border: OutlineInputBorder(),
-                      suffixIcon: Icon(Icons.search),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        onChanged: _filterItems,
+                        decoration: const InputDecoration(
+                          hintText: 'Search...',
+                          border: OutlineInputBorder(),
+                          suffixIcon: Icon(Icons.search),
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                  ElevatedButton(
+                      onPressed: _onFilterPress(),
+                      style: ElevatedButton.styleFrom(
+                        elevation: 8,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      child: const Icon(
+                        Icons.filter_alt_outlined,
+                        color: Colors.black45,
+                      )
+                  )
+                ],
               ),
-              PopupMenuButton<String>(
-                onSelected: _selectFilter,
-                itemBuilder: (BuildContext context) {
-                  return <String>['All', 'Item 1', 'Item 2'].map((String choice) {
-                    return PopupMenuItem<String>(
-                      value: choice,
-                      child: Text(choice),
-                    );
-                  }).toList();
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: <Widget>[
-                      Text(_selectedFilter),
-                      const Icon(Icons.filter_list),
-                    ],
-                  ),
+              // List View
+              Expanded(
+                child: ListView.builder(
+                  itemCount: _filteredItems.length,
+                  itemBuilder: (context, index) {
+                    return ListGuestItem(model: _filteredItems[index]);
+                  },
                 ),
               ),
             ],
           ),
-          // List View
-          Expanded(
-            child: ListView.builder(
-              itemCount: _filteredItems.length,
-              itemBuilder: (context, index) {
-                return ListGuestItem(model: _filteredItems[index]);
-              },
-            ),
-          ),
-        ],
+        ]
       ),
     );
   }
+
+  _onFilterPress() {}
 }

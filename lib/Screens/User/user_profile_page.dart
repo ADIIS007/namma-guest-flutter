@@ -10,7 +10,8 @@ class UserProfilePage extends StatelessWidget {
   final String userName = "John Doe";
   final String userEmail = "john.doe@example.com";
   final String phoneNumber = "7075955169";
-  final String userImageUrl = 'https://media.licdn.com/dms/image/v2/D5603AQHBpp0P22tz1w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724932714830?e=1736380800&v=beta&t=2oJCcmrS1jhShPrbSWNPIH-jMSs7RTaf1MTT3ud8sTY';
+  final String userImageUrl =
+  'https://media.licdn.com/dms/image/v2/D5603AQHBpp0P22tz1w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724932714830?e=1736380800&v=beta&t=2oJCcmrS1jhShPrbSWNPIH-jMSs7RTaf1MTT3ud8sTY';
 
   final List<Map<String, String>> developers = [
     {
@@ -278,7 +279,7 @@ class UserProfilePage extends StatelessWidget {
     if (url.startsWith('http://') || url.startsWith('https://')) {
       launch(url);
     } else {
-      throw Exception("Invalid URL.");
+      _showToast("Invalid URL: $url");
     }
   }
 
