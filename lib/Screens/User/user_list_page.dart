@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:namma_guest/Model/paying_guest_list_model.dart';
 import 'package:namma_guest/Screens/User/list_item.dart';
 
+import '../../UI/Elements/SelectionButton.dart';
+
 class UserListPage extends StatefulWidget {
   const UserListPage({super.key});
 
@@ -12,7 +14,12 @@ class UserListPage extends StatefulWidget {
 class _UserListPageState extends State<UserListPage> {
   double _sizeOfFilterMenu = 0;
   String _searchQuery = '';
-  String _selectedFilter = 'All';
+  String _selectedRating = '0';
+  bool _selectOnlyVerified = false;
+  double _selectedDistanceRange = 75.0;
+  String _selectedFilter = '0';
+  RangeValues _selectedPriceRange = const RangeValues(0.0, 10000.0);
+  String _selectedSort = 'N/A';
   final List<PayingGuestListModel> _items = List.generate(100, (index) =>
     PayingGuestListModel(
       name: 'Item $index',
@@ -92,9 +99,9 @@ class _UserListPageState extends State<UserListPage> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
-                      child: const Icon(
+                      child: Icon(
                         Icons.filter_alt_outlined,
-                        color: Colors.black45,
+                        color: (_sizeOfFilterMenu == 0) ? Colors.black45 : Colors.deepPurpleAccent,
                       )
                   )
                 ],
@@ -114,84 +121,166 @@ class _UserListPageState extends State<UserListPage> {
               initialChildSize: _sizeOfFilterMenu,
               minChildSize: 0,
               maxChildSize: 0.5,
-              builder: (BuildContext context,ScrollController scrollController){
+              builder: (BuildContext context,ScrollController scrollController) {
                 return Container(
                   height: 150,
                   decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(25),
-                    border: const Border(
-                      top: BorderSide(
-                        color: Colors.black
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(25),
+                      border: const Border(
+                          top: BorderSide(
+                              color: Colors.black
+                          )
                       )
-                    )
                   ),
                   child: ListView(
-                  children: const [
-                    Text("Tadaaaaaaaaaa 1"),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                    Text("Tadaaaaaaaaaa 2"),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                    Text("Tadaaaaaaaaaa 3"),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                    Text("Tadaaaaaaaaaa 4"),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                    Text("Tadaaaaaaaaaa 5"),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                    Text("Tadaaaaaaaaaa 6"),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                    Text("Tadaaaaaaaaaa 7"),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                    Text("Tadaaaaaaaaaa 8"),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                    Text("Tadaaaaaaaaaa 9"),
-                    Divider(
-                      color: Colors.black,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                  ],
+                    children: [
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text("Sort By"),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                  children: [
+                                    SelectionButton(
+                                      label: "Popularity",
+                                      isSelected: _selectedSort == 'Popularity',
+                                    ),
+                                    SelectionButton(
+                                      label: "Price low to high",
+                                      isSelected: _selectedSort == 'Price low to high',
+                                    ),
+                                    SelectionButton(
+                                      label: "Price high to low",
+                                      isSelected: _selectedSort == 'Price high to load ',
+                                    ),
+                                    SelectionButton(
+                                      label: "Distance",
+                                      isSelected: _selectedSort == 'Distance',
+                                    ),
+                                    SelectionButton(
+                                      label: "Rating",
+                                      isSelected: _selectedSort == 'Rating',
+                                    ),
+                                  ]
+                              ),
+                            ),
+                          ]
+                      ),
+                      const Divider(
+                        color: Colors.black,
+                        thickness: 2,
+                        indent: 20,
+                        endIndent: 20,
+                      ),
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text("Rating"),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                  children: [
+                                    SelectionButton(
+                                      label: "1+",
+                                      isSelected: _selectedSort == '1+',
+                                    ),
+                                    SelectionButton(
+                                      label: "2+",
+                                      isSelected: _selectedSort == '2+',
+                                    ),
+                                    SelectionButton(
+                                      label: "3+",
+                                      isSelected: _selectedSort == '3+',
+                                    ),
+                                    SelectionButton(
+                                      label: "4+",
+                                      isSelected: _selectedSort == '4+',
+                                    ),
+                                    SelectionButton(
+                                      label: "5",
+                                      isSelected: _selectedSort == '5',
+                                    ),
+                                  ]
+                              ),
+                            ),
+                          ]
+                      ),
+                      const Divider(
+                        color: Colors.black,
+                        thickness: 2,
+                        indent: 20,
+                        endIndent: 20,
+                      ),
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text("Select only verified"),
+                            Switch(
+                                value: _selectOnlyVerified,
+                                onChanged: _selectOnlyVerifiedSwitch,
+                            )
+                          ]
+                      ),
+                      const Divider(
+                        color: Colors.black,
+                        thickness: 2,
+                        indent: 20,
+                        endIndent: 20,
+                      ),
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text("Price ranges"),
+                            RangeSlider(
+                              values: _selectedPriceRange,
+                              min: 0,
+                              max: 10000,
+                              labels : RangeLabels(
+                                '\$${_selectedPriceRange.start.toString()}',
+                                '\$${_selectedPriceRange.end.toString()}',
+                              ),
+                              onChanged: (RangeValues value) {
+                                setState(() {
+                                  _selectedPriceRange = value;
+                                });
+                              },
+                            ),
+                            Text(
+                              'Selected Price Range: ${_selectedPriceRange.start.toStringAsFixed(0)} - ${_selectedPriceRange.end.toStringAsFixed(0)}',
+                              style: const TextStyle(fontSize: 18),
+                            ),
+                          ]
+                      ),
+                      const Divider(
+                        color: Colors.black,
+                        thickness: 2,
+                        indent: 20,
+                        endIndent: 20,
+                      ),
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            const Text("Sort By"),
+                            Slider(
+                              value: _selectedDistanceRange,
+                              min: 0,
+                              max: 100,
+                              label : _selectedDistanceRange.round().toString(),
+                              onChanged: (double value) {
+                                setState(() {
+                                  _selectedDistanceRange = value;
+                                });
+                              },
+                            ),
+                            Text(
+                              'Selected Distance Range: ${_selectedDistanceRange.toStringAsFixed(0)}',
+                              style: const TextStyle(fontSize: 18),
+                            ),
+                          ]
+                      ),
+                    ],
                   ),
                 );
               }
@@ -211,5 +300,11 @@ class _UserListPageState extends State<UserListPage> {
         _sizeOfFilterMenu = 0;
       });
     }
+  }
+
+  void _selectOnlyVerifiedSwitch(bool value) {
+    setState(() {
+      _selectOnlyVerified = !_selectOnlyVerified;
+    });
   }
 }
