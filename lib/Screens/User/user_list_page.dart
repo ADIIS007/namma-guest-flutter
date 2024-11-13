@@ -14,13 +14,18 @@ class UserListPage extends StatefulWidget {
 class _UserListPageState extends State<UserListPage> {
   double _sizeOfFilterMenu = 0;
   String _searchQuery = '';
-  String _selectedRating = '0';
+
+  // Parameters for filter
   bool _selectOnlyVerified = false;
   double _selectedDistanceRange = 75.0;
   String _selectedFilter = '0';
   RangeValues _selectedPriceRange = const RangeValues(0.0, 10000.0);
   String _selectedSort = 'N/A';
-  final List<PayingGuestListModel> _items = List.generate(100, (index) =>
+  String _selectedRating = 'N/A';
+
+  final List<PayingGuestListModel> _items = List.generate(
+      100,
+      (index) =>
     PayingGuestListModel(
       name: 'Item $index',
       rating: index % 5 + 1.0,
@@ -146,22 +151,27 @@ class _UserListPageState extends State<UserListPage> {
                                     SelectionButton(
                                       label: "Popularity",
                                       isSelected: _selectedSort == 'Popularity',
+                                      onSelected: (sort) { _selectingSort(sort); },
                                     ),
                                     SelectionButton(
                                       label: "Price low to high",
                                       isSelected: _selectedSort == 'Price low to high',
+                                      onSelected: (sort) { _selectingSort(sort); },
                                     ),
                                     SelectionButton(
                                       label: "Price high to low",
-                                      isSelected: _selectedSort == 'Price high to load ',
+                                      isSelected: _selectedSort == 'Price high to low',
+                                      onSelected: (sort) { _selectingSort(sort); },
                                     ),
                                     SelectionButton(
                                       label: "Distance",
                                       isSelected: _selectedSort == 'Distance',
+                                      onSelected: (sort) { _selectingSort(sort); },
                                     ),
                                     SelectionButton(
                                       label: "Rating",
                                       isSelected: _selectedSort == 'Rating',
+                                      onSelected: (sort) { _selectingSort(sort); },
                                     ),
                                   ]
                               ),
@@ -184,23 +194,28 @@ class _UserListPageState extends State<UserListPage> {
                                   children: [
                                     SelectionButton(
                                       label: "1+",
-                                      isSelected: _selectedSort == '1+',
+                                      isSelected: _selectedRating == '1+',
+                                      onSelected: (rating) { _selectingRating(rating); },
                                     ),
                                     SelectionButton(
                                       label: "2+",
-                                      isSelected: _selectedSort == '2+',
+                                      isSelected: _selectedRating == '2+',
+                                      onSelected: (rating) { _selectingRating(rating); },
                                     ),
                                     SelectionButton(
                                       label: "3+",
-                                      isSelected: _selectedSort == '3+',
+                                      isSelected: _selectedRating == '3+',
+                                      onSelected: (rating) { _selectingRating(rating); },
                                     ),
                                     SelectionButton(
                                       label: "4+",
-                                      isSelected: _selectedSort == '4+',
+                                      isSelected: _selectedRating == '4+',
+                                      onSelected: (rating) { _selectingRating(rating); },
                                     ),
                                     SelectionButton(
                                       label: "5",
-                                      isSelected: _selectedSort == '5',
+                                      isSelected: _selectedRating == '5',
+                                      onSelected: (rating) { _selectingRating(rating); },
                                     ),
                                   ]
                               ),
@@ -300,6 +315,19 @@ class _UserListPageState extends State<UserListPage> {
         _sizeOfFilterMenu = 0;
       });
     }
+  }
+
+  void _selectingSort(String sort) {
+    setState(() {
+      _selectedSort = sort;
+    });
+  }
+
+  void _selectingRating(String rating) {
+
+    setState(() {
+      _selectedRating = rating;
+    });
   }
 
   void _selectOnlyVerifiedSwitch(bool value) {

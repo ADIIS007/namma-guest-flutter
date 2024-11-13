@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class SelectionButton extends StatefulWidget {
   final String label;
   final bool isSelected;
+  final Function(String) onSelected;
 
-  const SelectionButton({super.key, required this.label, required this.isSelected});
+  const SelectionButton({super.key, required this.label, required this.isSelected, required this.onSelected});
 
   @override
   State<SelectionButton> createState() => _SelectionButtonState();
@@ -27,7 +28,13 @@ class _SelectionButtonState extends State<SelectionButton> {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+          if(!widget.isSelected) {
+            widget.onSelected(widget.label);
+          } else {
+            widget.onSelected("NA");
+          }
+        },
         child: Text(
             widget.label,
             style: TextStyle(
