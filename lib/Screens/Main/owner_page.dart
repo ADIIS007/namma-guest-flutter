@@ -16,6 +16,16 @@ class _OwnerPageState extends State<OwnerPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Customize your look'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.edit),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const Placeholder()),
+              );
+            }
+          )
+        ]
       ),
       body: SingleChildScrollView(
         child: Padding(
