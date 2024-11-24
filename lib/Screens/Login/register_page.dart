@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:namma_guest/Api/api_service.dart';
+import 'package:namma_guest/Model/api_response.dart';
 import 'package:namma_guest/Service/validation.dart';
 
 import 'opt_page.dart';
@@ -13,6 +15,7 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   //Create a email Controller
   final TextEditingController _emailController = TextEditingController();
+  ApiService apiService = ApiService();
 
   @override
   Widget build(BuildContext context) {
@@ -119,12 +122,23 @@ class _RegisterState extends State<Register> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {
+                        onPressed: () async {
                           if(ValidationService.validateEmail(_emailController.text)) {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                  builder: (context) => const Otp()),
-                            );
+                            ApiResponse otpResponse = await apiService.sendOtpRequest(_emailController.text) as ApiResponse;
+                            if(otpResponse.status) {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) => const Otp()),
+                              );
+                            } else {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: const Text('Error'),
+                                  content: Text(otpResponse.response),
+                                ),
+                              );
+                            }
                           } else {
                             showDialog(
                               context: context,
