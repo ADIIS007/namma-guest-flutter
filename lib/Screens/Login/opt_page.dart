@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:namma_guest/Model/api_response.dart';
 
+import '../../Api/api_service.dart';
 import '../Main/main_page.dart';
 
 class Otp extends StatefulWidget {
@@ -10,7 +12,7 @@ class Otp extends StatefulWidget {
 }
 
 class _OtpState extends State<Otp> {
-
+  ApiService apiService = ApiService();
   final List<TextEditingController> _controllers = List.generate(4, (_) => TextEditingController());
 
   @override
@@ -104,7 +106,36 @@ class _OtpState extends State<Otp> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: _onTap,
+                        onPressed: () async {
+                          final values = _controllers.map((controller) => controller.text).toList();
+                          String otp = values.join();
+
+                          if (otp.length == 4) {
+                            ApiResponse apiResponse = await apiService.verifyOtpRequest("athithyaithayan@gmail.com", otp) as ApiResponse;
+                            if(apiResponse.status) {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(builder: (context) => const MainScreen()),
+                              );
+                            } else {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: const Text('Error'),
+                                  content: Text(apiResponse.response),
+                                ),
+                              );
+                            }
+                          } else {
+                            showDialog(
+                              context: context,
+                              builder: (context) => const AlertDialog(
+                                title: Text('Error'),
+                                content: Text("Unable to obtain proper format of OTP"),
+                              ),
+                            );
+
+                          }
+                        },
                         style: ButtonStyle(
                           foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.white),
@@ -144,14 +175,33 @@ class _OtpState extends State<Otp> {
               const SizedBox(
                 height: 18,
               ),
-              const Text(
-                "Resend New Code",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.purple,
+              GestureDetector(
+                child: const Text(
+                  "Resend New Code",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.purple,
+                  ),
+                  textAlign: TextAlign.center
                 ),
-                textAlign: TextAlign.center,
+                onTap: () async {
+                  ApiResponse otpResponse = await apiService.resendOtpRequest("athithyaithayan@gmail.com");
+                  if(otpResponse.status) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => const Otp()),
+                    );
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        title: const Text('Error'),
+                        content: Text(otpResponse.response),
+                      ),
+                    );
+                  }
+                },
               ),
             ],
           ),
@@ -193,15 +243,6 @@ class _OtpState extends State<Otp> {
           ),
         ),
       ),
-    );
-  }
-
-  void _onTap() {
-    final values = _controllers.map((controller) => controller.text).toList();
-    int otp = int.parse(values.join());
-
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => const MainScreen()),
     );
   }
 }
