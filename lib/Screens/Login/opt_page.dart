@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:namma_guest/Model/api_response.dart';
+import 'package:namma_guest/Screens/Admin/Onboarding/name_onboarding_page.dart';
+import 'package:namma_guest/Screens/Main/user_page.dart';
 
 import '../../Api/api_service.dart';
 import '../Main/main_page.dart';
 
 class Otp extends StatefulWidget {
-  const Otp({super.key});
+  final String email; // This will hold the parameter passed
+
+  // Constructor to accept the phoneNumber parameter
+  const Otp({Key? key, required this.email}) : super(key: key);
 
   @override
   _OtpState createState() => _OtpState();
@@ -111,11 +116,24 @@ class _OtpState extends State<Otp> {
                           String otp = values.join();
 
                           if (otp.length == 4) {
-                            ApiResponse apiResponse = await apiService.verifyOtpRequest("athithyaithayan@gmail.com", otp) as ApiResponse;
+                            ApiResponse apiResponse = await apiService.verifyOtpRequest(widget.email, otp) as ApiResponse;
                             if(apiResponse.status) {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(builder: (context) => const MainScreen()),
-                              );
+                              if (apiResponse.response.toString().toLowerCase()=="user") {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (context) => UserPage()),
+                                );
+                              } else if (apiResponse.response.toString().toLowerCase()=="owner") {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (context) => const NameOnboardingPage()),
+                                );
+                              } else {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (context) => const MainScreen()),
+                                );
+                              }
                             } else {
                               showDialog(
                                 context: context,
@@ -186,12 +204,11 @@ class _OtpState extends State<Otp> {
                   textAlign: TextAlign.center
                 ),
                 onTap: () async {
-                  ApiResponse otpResponse = await apiService.resendOtpRequest("athithyaithayan@gmail.com");
+                  ApiResponse otpResponse = await apiService.resendOtpRequest(widget.email);
                   if(otpResponse.status) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                          builder: (context) => const Otp()),
-                    );
+                    for(var _controller in _controllers) {
+                      _controller.clear();
+                    }
                   } else {
                     showDialog(
                       context: context,
