@@ -128,7 +128,7 @@ class _RegisterState extends State<Register> {
                             if(otpResponse.status) {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                    builder: (context) => const Otp()),
+                                    builder: (context) => Otp(email: _emailController.text)),
                               );
                             } else {
                               showDialog(
