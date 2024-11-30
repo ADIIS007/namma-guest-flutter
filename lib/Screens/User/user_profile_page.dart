@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:namma_guest/Service/shared_pref_login.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UserProfilePage extends StatelessWidget {
@@ -59,11 +62,39 @@ class UserProfilePage extends StatelessWidget {
           child: Center(
               child: Column(
                 children: [
-                profile(context),
-                const SizedBox(height: 16),
-                developer(context),
-                const SizedBox(height: 16),
-                donate(context),
+                  profile(context),
+                  const SizedBox(height: 16),
+                  developer(context),
+                  const SizedBox(height: 16),
+                  donate(context),
+                  const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () async {
+                      await SharedPrefLogin.clearLoginDetails();
+                      exit(0);
+                    },
+                    style: ButtonStyle(
+                      foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
+                      backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.red),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(24.0),
+                        ),
+                      ),
+                      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                        const EdgeInsets.symmetric(horizontal: 120.0), // Increase horizontal padding
+                      ),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(14.0),
+                      child: Text(
+                        'Log out',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                    ),
+                  ),
                 ],
               )
           )
@@ -194,6 +225,7 @@ class UserProfilePage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(7.0),
       child: Container(
+        margin: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey),
           borderRadius: BorderRadius.circular(15),
@@ -202,6 +234,7 @@ class UserProfilePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(width: 20),
             const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

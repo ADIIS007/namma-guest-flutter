@@ -18,7 +18,7 @@ class _UserListPageState extends State<UserListPage> {
   // Parameters for filter
   bool _selectOnlyVerified = false;
   double _selectedDistanceRange = 75.0;
-  String _selectedFilter = '0';
+  final String _selectedFilter = '0';
   RangeValues _selectedPriceRange = const RangeValues(0.0, 10000.0);
   String _selectedSort = 'N/A';
   String _selectedRating = 'N/A';

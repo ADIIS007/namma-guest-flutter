@@ -66,7 +66,7 @@ class _MapPageState extends State<MapPage> {
                       Marker(
                         width: 80.0,
                         height: 80.0,
-                        point: _location!,
+                        point: _location,
                         child: Icon(
                           Icons.location_searching,
                           color: Colors.purple.shade200,
