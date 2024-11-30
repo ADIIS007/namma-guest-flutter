@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:namma_guest/Api/api_service.dart';
+import 'package:namma_guest/Model/api_response.dart';
 import 'package:namma_guest/Screens/Admin/Onboarding/name_onboarding_page.dart';
 import 'package:namma_guest/Screens/Main/user_page.dart';
-
-import 'owner_page.dart';
+import 'package:namma_guest/Service/shared_pref_login.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -78,7 +79,7 @@ class _MainPageState extends State<MainScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    _conformationBox(context, 'You are sure you are Search for Accommodation.\nThis action can not be reverted!!', UserPage());
+                    _conformationBox(context, 'You are sure you are Search for Accommodation.\nThis action can not be reverted!!', UserPage(), "USER");
                   },
                   style: ButtonStyle(
                     foregroundColor:
@@ -107,7 +108,7 @@ class _MainPageState extends State<MainScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    _conformationBox(context, 'You are sure you are Owning/Listing an Accommodation.\nThis action can not be reverted!!', const NameOnboardingPage());
+                    _conformationBox(context, 'You are sure you are Owning/Listing an Accommodation.\nThis action can not be reverted!!', const NameOnboardingPage(), "OWNER");
                   },
                   style: ButtonStyle(
                     foregroundColor:
@@ -134,7 +135,7 @@ class _MainPageState extends State<MainScreen> {
     );
   }
 
-  void _conformationBox(BuildContext context, String description, Widget page) {
+  void _conformationBox(BuildContext context, String description, Widget page, String type) {
     showDialog<String>(
       context: context,
       builder: (BuildContext context) =>
@@ -147,15 +148,28 @@ class _MainPageState extends State<MainScreen> {
                 child: const Text('Cancel'),
               ),
               TextButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => page),
-                  );
+                onPressed: () async{
+                  Map<String, String?> sharedPref = await SharedPrefLogin.getLoginDetails();
+                  ApiResponse apiResponse = await ApiService().setUserType(sharedPref['token']!,type) as ApiResponse;
+                  if (apiResponse.status) {
+                    await SharedPrefLogin.saveLoginDetails(sharedPref['token']!, type);
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => page),
+                    );
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        title: const Text('Error'),
+                        content: Text(apiResponse.response),
+                      ),
+                    );
+                  }
                 },
                 child: const Text('OK'),
               ),
             ],
           ),
-    );
+      );
   }
 }
