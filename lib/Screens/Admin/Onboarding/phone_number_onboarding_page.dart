@@ -1,15 +1,21 @@
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:namma_guest/Model/paying_guest_model.dart';
 import 'package:namma_guest/Screens/Admin/Onboarding/whatsapp_onboarding_page.dart';
+import 'package:namma_guest/Service/validation.dart';
 
 class PhoneNumberOnboardingPage extends StatefulWidget {
-  const PhoneNumberOnboardingPage({super.key});
+  final PayingGuest payingGuest;
+  const PhoneNumberOnboardingPage({super.key,required this.payingGuest});
 
   @override
   State<PhoneNumberOnboardingPage> createState() => _PhoneNumberOnboardingPageState();
 }
 
 class _PhoneNumberOnboardingPageState extends State<PhoneNumberOnboardingPage> {
+  final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +32,9 @@ class _PhoneNumberOnboardingPageState extends State<PhoneNumberOnboardingPage> {
               height: 250,
             ),
             const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _controller,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Enter Hostel Phone Number',
               ),
@@ -45,9 +52,16 @@ class _PhoneNumberOnboardingPageState extends State<PhoneNumberOnboardingPage> {
                   elevation: 10,
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const WhatsappOnboardingPage()),
-                  );
+                  if(_controller.text.isEmpty || _controller.text.length != 10 || int.tryParse(_controller.text)==null || !ValidationService.validatePhoneNumber(_controller.text)) {
+                    _toastMessage("Enter a proper phone Number");
+                  } else {
+                    print("Enter a proper phone Number "+_controller.text);
+                    widget.payingGuest.setPhone = _controller.text;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => WhatsappOnboardingPage(payingGuest: widget.payingGuest,)),
+                    );
+                  }
                 },
                 icon: const Icon(Icons.arrow_forward),
                 label: const Text(
@@ -62,6 +76,18 @@ class _PhoneNumberOnboardingPageState extends State<PhoneNumberOnboardingPage> {
           ],
         ),
       ),
+    );
+  }
+
+  void _toastMessage(String msg) async {
+    Fluttertoast.showToast(
+        msg: msg,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
     );
   }
 }

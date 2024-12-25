@@ -82,7 +82,6 @@ class _MapPageState extends State<MapPage> {
   }
 
   Future<void> _checkLocationPermission() async {
-    print("1");
     PermissionStatus permission = await Permission.location.status;
     if(permission.isDenied || permission.isPermanentlyDenied){
       if(await Permission.location.request().isGranted){
@@ -108,15 +107,12 @@ class _MapPageState extends State<MapPage> {
   }
 
   Future<void> _checkLocationService() async {
-    print("2");
     bool isLocationServiceEnabled = await _locationService.serviceEnabled();
     if(isLocationServiceEnabled){
-      print("I Reached here");
       _getLocationData();
     } else {
       bool serviceStatus = await _locationService.requestService();
       if(serviceStatus){
-        print("I Reached here");
         _getLocationData();
       } else {
         _toastMessage("Location service is disabled. kindly enable it from settings");

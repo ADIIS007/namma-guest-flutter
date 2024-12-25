@@ -18,7 +18,7 @@ class UserProfilePage extends StatelessWidget {
 
   final List<Map<String, String>> developers = [
     {
-      'Position': 'Principal Developer',
+      'Position': 'Founder & Developer',
       'name': 'ADIIS007',
       'link': 'https://www.linkedin.com/in/athithya-ithayan-4891151bb/',
       'Bio': 'Full stack Java & Flutter developer',
@@ -26,7 +26,7 @@ class UserProfilePage extends StatelessWidget {
           'https://media.licdn.com/dms/image/v2/D5603AQGqTE0_jDm4Uw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714451350660?e=1736380800&v=beta&t=jJyXC6YSQXiY86rUSv-TI8XB5hoxQUUF5-WlJn2KSp0'
     },
     {
-      'Position': 'Managing Developer',
+      'Position': 'Sales & Advt Manager',
       'name': 'Developer 2',
       'link': 'https://linkedin.com/in/developer2',
       'Bio': 'Full stack Java & Flutter developer',

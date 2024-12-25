@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 
 import 'package:namma_guest/Api/api_constants.dart';
 import 'package:namma_guest/Model/api_response.dart';
+import 'package:namma_guest/Model/paying_guest_model.dart';
 
 import '../Service/shared_pref_login.dart';
 
@@ -27,7 +28,6 @@ class ApiService {
           },
           body: json.encode(body)
       );
-      print(response.statusCode);
 
       if (response.statusCode == 200) {
         //Successful condition
@@ -71,10 +71,10 @@ class ApiService {
           },
           body: json.encode(body)
       );
-      print(response.statusCode);
 
       if (response.statusCode == 200) {
         //Successful condition
+        print("Hi Adi login saved!");
         await SharedPrefLogin.saveLoginDetails(email,response.body);
         return ApiResponse(true, response.body);
       } else if (response.statusCode == 425) {
@@ -115,7 +115,6 @@ class ApiService {
           },
           body: json.encode(body)
       );
-      print(response.statusCode);
 
       if (response.statusCode == 200) {
         //Successful condition
@@ -161,8 +160,6 @@ class ApiService {
           },
           body: json.encode(body)
       );
-      print(response.statusCode);
-      print(url);
 
       if (response.statusCode == 200) {
         //Successful condition
@@ -180,6 +177,54 @@ class ApiService {
         //Internal server condition
         return ApiResponse(false, response.body);
       } else if (response.statusCode == 429) {
+        //Internal server condition
+        return ApiResponse(false, response.body);
+      } else {
+        throw Exception('Failed to Resend OTP');
+      }
+    } catch (e) {
+      return ApiResponse(false, e.toString());
+    }
+  }
+
+  // Owner specific API methods
+  Future<dynamic> createPg(PayingGuest payingGuest) async {
+    try {
+      Map<String, String?> sharedPref = await SharedPrefLogin.getLoginDetails();
+      String? email = sharedPref['token']!;
+      
+      //Endpoint for requesting OTP
+      final url = Uri.parse("$_baseUrl/owner/hostelCreation/$email");
+
+      //Body for requesting OTP
+      payingGuest.setCountry = 'India';
+      final Map<String, dynamic> body = payingGuest.toJson();
+
+      //Endpoint for requesting OTP
+      final response = await http.post(
+          url,
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: json.encode(body)
+      );
+
+      if (response.statusCode == 200) {
+        //Successful condition
+        return ApiResponse(true, response.body);
+      } else if (response.statusCode == 404) {
+        //Not Found condition
+        return ApiResponse(false, response.body);
+      } else if (response.statusCode == 400) {
+        //Bad request condition
+        return ApiResponse(false, response.body);
+      } else if (response.statusCode == 409) {
+        //Conflict condition
+        return ApiResponse(false, response.body);
+      } else if (response.statusCode == 403) {
+        //forbidden conditions condition
+        return ApiResponse(false, response.body);
+      } else if (response.statusCode == 500) {
         //Internal server condition
         return ApiResponse(false, response.body);
       } else {

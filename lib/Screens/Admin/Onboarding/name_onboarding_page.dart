@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:namma_guest/Model/paying_guest_model.dart';
 import 'package:namma_guest/Screens/Admin/Onboarding/description_onboarding_page.dart';
 
 class NameOnboardingPage extends StatefulWidget {
@@ -8,6 +10,8 @@ class NameOnboardingPage extends StatefulWidget {
 }
 
 class _NameOnboardingPageState extends State<NameOnboardingPage> {
+  final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +28,9 @@ class _NameOnboardingPageState extends State<NameOnboardingPage> {
               height: 250,
             ),
             const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _controller,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Enter Hostel Name',
               ),
@@ -43,9 +48,20 @@ class _NameOnboardingPageState extends State<NameOnboardingPage> {
                   elevation: 10,
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const DescriptionOnboardingPage()),
-                  );
+                  if(_controller.text.length<=3) {
+                    _toastMessage("Hostel Name must be more than 3 characters");
+                  }
+                  else if (_controller.text.length>=255) {
+                    _toastMessage("Hostel Name must be more than 255 characters");
+                  }
+                  else {
+                    PayingGuest payingGuest = PayingGuest();
+                    payingGuest.setName = _controller.text;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (
+                          context) => DescriptionOnboardingPage(payingGuest: payingGuest,)),
+                    );
+                  }
                 },
                 icon: const Icon(Icons.arrow_forward),
                 label: const Text(
@@ -60,6 +76,18 @@ class _NameOnboardingPageState extends State<NameOnboardingPage> {
           ],
         ),
       ),
+    );
+  }
+
+  void _toastMessage(String msg) async {
+    Fluttertoast.showToast(
+        msg: msg,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
     );
   }
 }

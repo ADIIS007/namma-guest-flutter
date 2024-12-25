@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:namma_guest/Model/paying_guest_model.dart';
 import 'package:namma_guest/Screens/Admin/Onboarding/pincode_onboarding_page.dart';
 
 class CityOnboardingPage extends StatefulWidget {
-  const CityOnboardingPage({super.key});
+  final PayingGuest payingGuest;
+  const CityOnboardingPage({super.key,required this.payingGuest});
 
   @override
   State<CityOnboardingPage> createState() => _CityOnboardingPageState();
 }
 
 class _CityOnboardingPageState extends State<CityOnboardingPage> {
+  final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +30,9 @@ class _CityOnboardingPageState extends State<CityOnboardingPage> {
               height: 250,
             ),
             const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _controller,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Enter Hostel City',
               ),
@@ -44,9 +50,16 @@ class _CityOnboardingPageState extends State<CityOnboardingPage> {
                   elevation: 10,
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const PincodeOnboardingPage()),
-                  );
+                  if (_controller.text.isEmpty || _controller.text.length<3) {
+                    _toastMessage('City name cannot be empty');
+                    return;
+                  } else {
+                    widget.payingGuest.setCity = _controller.text;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => PinCodeOnboardingPage(payingGuest: widget.payingGuest,)),
+                    );
+                  }
                 },
                 icon: const Icon(Icons.arrow_forward),
                 label: const Text(
@@ -61,6 +74,18 @@ class _CityOnboardingPageState extends State<CityOnboardingPage> {
           ],
         ),
       ),
+    );
+  }
+
+  void _toastMessage(String msg) async {
+    Fluttertoast.showToast(
+        msg: msg,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
     );
   }
 }

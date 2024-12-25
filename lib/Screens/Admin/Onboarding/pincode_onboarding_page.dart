@@ -1,15 +1,20 @@
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:namma_guest/Model/paying_guest_model.dart';
 import 'package:namma_guest/Screens/Admin/Onboarding/email_onboarding_page.dart';
 
-class PincodeOnboardingPage extends StatefulWidget {
-  const PincodeOnboardingPage({super.key});
+class PinCodeOnboardingPage extends StatefulWidget {
+  final PayingGuest payingGuest;
+  const PinCodeOnboardingPage({super.key,required this.payingGuest});
 
   @override
-  State<PincodeOnboardingPage> createState() => _PincodeOnboardingPageState();
+  State<PinCodeOnboardingPage> createState() => _PinCodeOnboardingPageState();
 }
 
-class _PincodeOnboardingPageState extends State<PincodeOnboardingPage> {
+class _PinCodeOnboardingPageState extends State<PinCodeOnboardingPage> {
+  final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +31,9 @@ class _PincodeOnboardingPageState extends State<PincodeOnboardingPage> {
               height: 250,
             ),
             const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _controller,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Enter Hostel Pin Code',
               ),
@@ -45,9 +51,17 @@ class _PincodeOnboardingPageState extends State<PincodeOnboardingPage> {
                   elevation: 10,
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const EmailOnboardingPage()),
-                  );
+                  if(_controller.text.isEmpty || _controller.text.length !=6 || int.tryParse(_controller.text)==null) {
+                    _toastMessage('Please enter a valid pin code');
+                    return;
+                  } else {
+                    int pinCode = int.parse(_controller.text);
+                    widget.payingGuest.setPinCode = pinCode;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => EmailOnboardingPage(payingGuest: widget.payingGuest,)),
+                    );
+                  }
                 },
                 icon: const Icon(Icons.arrow_forward),
                 label: const Text(
@@ -62,6 +76,18 @@ class _PincodeOnboardingPageState extends State<PincodeOnboardingPage> {
           ],
         ),
       ),
+    );
+  }
+
+  void _toastMessage(String msg) async {
+    Fluttertoast.showToast(
+        msg: msg,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
     );
   }
 }

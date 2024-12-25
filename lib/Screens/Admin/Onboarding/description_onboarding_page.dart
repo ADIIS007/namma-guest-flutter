@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:namma_guest/Model/paying_guest_model.dart';
 import 'package:namma_guest/Screens/Admin/Onboarding/address_onboarding_page.dart';
 
 class DescriptionOnboardingPage extends StatefulWidget {
-  const DescriptionOnboardingPage({super.key});
+  final PayingGuest payingGuest;
+
+  const DescriptionOnboardingPage({super.key, required this.payingGuest});
 
   @override
   State<DescriptionOnboardingPage> createState() => _DescriptionOnboardingPageState();
 }
 
 class _DescriptionOnboardingPageState extends State<DescriptionOnboardingPage> {
+  final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +31,9 @@ class _DescriptionOnboardingPageState extends State<DescriptionOnboardingPage> {
               height: 250,
             ),
             const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _controller,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Enter Hostel Description',
               ),
@@ -44,9 +51,19 @@ class _DescriptionOnboardingPageState extends State<DescriptionOnboardingPage> {
                   elevation: 10,
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const AddressOnboardingPage()),
-                  );
+                  if(_controller.text.length<=25) {
+                    _toastMessage("Hostel Description must be more than 25 characters");
+                  }
+                  else if (_controller.text.length>=255) {
+                    _toastMessage("Hostel Description must be more than 255 characters");
+                  }
+                  else {
+                    widget.payingGuest.setDescription = _controller.text;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => AddressOnboardingPage(payingGuest: widget.payingGuest,)),
+                    );
+                  }
                 },
                 icon: const Icon(Icons.arrow_forward),
                 label: const Text(
@@ -61,6 +78,18 @@ class _DescriptionOnboardingPageState extends State<DescriptionOnboardingPage> {
           ],
         ),
       ),
+    );
+  }
+
+  void _toastMessage(String msg) async {
+    Fluttertoast.showToast(
+        msg: msg,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
     );
   }
 }

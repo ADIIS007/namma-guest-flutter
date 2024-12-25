@@ -69,7 +69,6 @@ class _UserPageState extends State<UserPage> {
     if(status.isDenied){
       _requestLocationPermission();
     } else if (status.isGranted){
-      print('Location permission granted');
       return;
     } else if(status.isPermanentlyDenied){
       openAppSettings();
@@ -79,7 +78,6 @@ class _UserPageState extends State<UserPage> {
   Future<void> _requestLocationPermission() async{
     final status = await Permission.location.request();
     if(status.isGranted){
-      print('Location permission granted');
     } else if(status.isDenied){
       _requestLocationPermission();
     } else if(status.isPermanentlyDenied){

@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:namma_guest/Model/paying_guest_model.dart';
 import 'package:namma_guest/Screens/Admin/Onboarding/state_onboarding_page.dart';
 
 class AddressOnboardingPage extends StatefulWidget {
-  const AddressOnboardingPage({super.key});
+  final PayingGuest payingGuest;
+
+  const AddressOnboardingPage({super.key,required this.payingGuest});
 
   @override
   State<AddressOnboardingPage> createState() => _AddressOnboardingPageState();
 }
 
 class _AddressOnboardingPageState extends State<AddressOnboardingPage> {
+  final TextEditingController _controller1 = TextEditingController();
+  final TextEditingController _controller2 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,15 +32,17 @@ class _AddressOnboardingPageState extends State<AddressOnboardingPage> {
               height: 250,
             ),
             const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _controller1,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Enter Hostel Address Line 1',
               ),
             ),
             const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _controller2,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Enter Hostel Address Line 2',
               ),
@@ -51,9 +60,20 @@ class _AddressOnboardingPageState extends State<AddressOnboardingPage> {
                   elevation: 10,
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const StateOnboardingPage()),
-                  );
+                  if(_controller1.text.isEmpty || _controller2.text.isEmpty) {
+                    _toastMessage('Please enter address it can not be empty');
+                  }
+                  else if (_controller1.text.length>=255 || _controller2.text.length>=255) {
+                    _toastMessage('Address should not exceed 255 characters');
+                  }
+                  else {
+                    String address = "${_controller1.text}\n${_controller2.text}";
+                    widget.payingGuest.setAddress = address;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => StateOnboardingPage(payingGuest: widget.payingGuest,)),
+                    );
+                  }
                 },
                 icon: const Icon(Icons.arrow_forward),
                 label: const Text(
@@ -68,6 +88,18 @@ class _AddressOnboardingPageState extends State<AddressOnboardingPage> {
           ],
         ),
       ),
+    );
+  }
+
+  void _toastMessage(String msg) async {
+    Fluttertoast.showToast(
+        msg: msg,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
     );
   }
 }

@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:namma_guest/Model/paying_guest_model.dart';
 import 'package:namma_guest/Screens/Admin/Onboarding/city_onboarding_page.dart';
 
 class StateOnboardingPage extends StatefulWidget {
-  const StateOnboardingPage({super.key});
+  final PayingGuest payingGuest;
+  const StateOnboardingPage({super.key,required this.payingGuest});
 
   @override
   State<StateOnboardingPage> createState() => _StateOnboardingPageState();
 }
 
 class _StateOnboardingPageState extends State<StateOnboardingPage> {
+  final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +30,9 @@ class _StateOnboardingPageState extends State<StateOnboardingPage> {
               height: 250,
             ),
             const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
+            TextField(
+              controller: _controller,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Enter Hostel State',
               ),
@@ -44,9 +50,15 @@ class _StateOnboardingPageState extends State<StateOnboardingPage> {
                   elevation: 10,
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const CityOnboardingPage()),
-                  );
+                  if (_controller.text.isEmpty || _controller.text.length<3) {
+                    _toastMessage('Please enter the valid hostel state');
+                  } else {
+                    widget.payingGuest.setState = _controller.text;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => CityOnboardingPage(payingGuest: widget.payingGuest,)),
+                    );
+                  }
                 },
                 icon: const Icon(Icons.arrow_forward),
                 label: const Text(
@@ -61,6 +73,18 @@ class _StateOnboardingPageState extends State<StateOnboardingPage> {
           ],
         ),
       ),
+    );
+  }
+
+  void _toastMessage(String msg) async {
+    Fluttertoast.showToast(
+        msg: msg,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
     );
   }
 }

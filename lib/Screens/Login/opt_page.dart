@@ -151,7 +151,6 @@ class _OtpState extends State<Otp> {
                                 content: Text("Unable to obtain proper format of OTP"),
                               ),
                             );
-
                           }
                         },
                         style: ButtonStyle(
