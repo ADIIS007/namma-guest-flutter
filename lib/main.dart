@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:namma_guest/Screens/Admin/Onboarding/name_onboarding_page.dart';
+import 'package:namma_guest/Screens/Main/main_page.dart';
+import 'package:namma_guest/Screens/Main/user_page.dart';
+import 'package:namma_guest/Service/shared_pref_login.dart';
 
 import 'Screens/Login/login_page.dart';
 
@@ -10,15 +14,50 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //     title: 'Flutter Demo',
+  //     theme: ThemeData(
+  //       colorScheme: ColorScheme.fromSeed(seedColor: Colors.limeAccent),
+  //       useMaterial3: true,
+  //     ),
+  //     home: const LoginPage(),
+  //   );
+  // }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const LoginPage(),
+    return FutureBuilder<Map<String, String?>>(
+      future: SharedPrefLogin.getLoginDetails(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        if (snapshot.hasError) {
+          return const Center(child: Text('Error loading login data'));
+        }
+
+        if (!snapshot.hasData) {
+          return const Center(child: Text('No login data available'));
+        }
+
+        // Retrieve login details
+        String? email = snapshot.data!['token'];
+        String? userType = snapshot.data!['type'];
+
+        // Decide navigation based on the userType
+        if (email == null || userType == null) {
+          return const LoginPage(); // Navigate to user type section if data is null
+        } else if (userType == 'USER') {
+          return UserPage(); // Navigate to User Main Page
+        } else if (userType == 'ADMIN') {
+          return const NameOnboardingPage(); // Navigate to Admin Main Page
+        } else {
+          return const Placeholder(); // Default to user type section
+        }
+      },
     );
   }
 }

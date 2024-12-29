@@ -74,7 +74,6 @@ class ApiService {
 
       if (response.statusCode == 200) {
         //Successful condition
-        print("Hi Adi login saved!");
         await SharedPrefLogin.saveLoginDetails(email,response.body);
         return ApiResponse(true, response.body);
       } else if (response.statusCode == 425) {
